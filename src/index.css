@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  body {
+    @apply bg-offwhite text-charcoal overflow-x-hidden selection:bg-signal selection:text-offwhite;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Global CSS Noise Overlay */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Brutalist components and cards */
+  .brutalist-border {
+    @apply border-2 border-charcoal;
+  }
+  
+  .brutalist-card {
+    @apply brutalist-border bg-offwhite p-6 shadow-brutalist transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutalist-hover;
+  }
+
+  .brutalist-card-red {
+    @apply brutalist-border bg-offwhite p-6 shadow-brutalist-red transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutalist-red-hover;
+  }
+
+  .brutalist-button {
+    @apply brutalist-border bg-signal text-offwhite px-6 py-3 font-mono font-bold uppercase transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutalist active:translate-x-[0px] active:translate-y-[0px] active:shadow-none;
+  }
+
+  .brutalist-button-black {
+    @apply brutalist-border bg-charcoal text-offwhite px-6 py-3 font-mono font-bold uppercase transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutalist-red active:translate-x-[0px] active:translate-y-[0px] active:shadow-none;
+  }
+
+  .brutalist-button-secondary {
+    @apply brutalist-border bg-offwhite text-charcoal px-6 py-3 font-mono font-bold uppercase transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutalist active:translate-x-[0px] active:translate-y-[0px] active:shadow-none;
+  }
+
+  /* Custom grid helper for brutalist lines */
+  .brutalist-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+  }
+
+  .brutalist-grid-dark {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(245, 243, 222, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(245, 243, 222, 0.03) 1px, transparent 1px);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-paper border-l-2 border-charcoal;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-charcoal border-l-2 border-charcoal;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-signal;
+  }
+}
+
+/* Custom CSS animations for UI elements */
+.pulse-dot {
+  box-shadow: 0 0 0 0 rgba(230, 59, 46, 0.7);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(230, 59, 46, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(230, 59, 46, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(230, 59, 46, 0);
+  }
+}
+
+/* Scroll Trigger Card scale/blur transitions */
+.protocol-card {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              filter 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.protocol-card.inactive {
+  transform: scale(0.9);
+  filter: blur(8px);
+  opacity: 0.5;
+}
