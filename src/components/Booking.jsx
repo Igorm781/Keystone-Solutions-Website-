@@ -4,11 +4,45 @@ import { Calendar, PhoneCall, ArrowRight } from 'lucide-react'
 function Booking() {
   const [formData, setFormData] = useState({ name: '', email: '', role: '', company: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (formData.name && formData.email && formData.role && formData.company) {
-      setSubmitted(true)
+      setIsSubmitting(true)
+      setError('')
+      fetch("https://formsubmit.co/ajax/zo.misc123@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          Email: formData.email,
+          Role: formData.role,
+          Company: formData.company,
+          _subject: "New Schedule Request - Keystone Solutions",
+          _captcha: "false"
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to submit form')
+        }
+        return response.json()
+      })
+      .then(() => {
+        setSubmitted(true)
+      })
+      .catch((err) => {
+        setError('Something went wrong. Please try again or use the calendar link.')
+        console.error(err)
+      })
+      .finally(() => {
+        setIsSubmitting(false)
+      })
     }
   }
 
@@ -108,10 +142,17 @@ function Booking() {
 
                 <button
                   type="submit"
-                  className="brutalist-button w-full mt-4 flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="brutalist-button w-full mt-4 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  REQUEST SCHEDULE <ArrowRight className="w-4 h-4" />
+                  {isSubmitting ? 'SENDING...' : 'REQUEST SCHEDULE'} 
+                  {!isSubmitting && <ArrowRight className="w-4 h-4" />}
                 </button>
+                {error && (
+                  <p className="text-red-600 font-mono text-[10px] uppercase text-center mt-2 font-bold">
+                    {error}
+                  </p>
+                )}
                 
                 <span className="font-mono text-[9px] text-charcoal/40 text-center block mt-1 uppercase">
                   or calendar redirects to: <a href="https://cal.com/keystonesolution/discovery" target="_blank" rel="noreferrer" className="text-signal hover:underline">cal.com/keystonesolution/discovery</a>
