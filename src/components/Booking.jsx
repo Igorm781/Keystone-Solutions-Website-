@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { Calendar, PhoneCall, Check, ArrowRight } from 'lucide-react'
+import { Calendar, PhoneCall, ArrowRight } from 'lucide-react'
 
 function Booking() {
-  const [formData, setFormData] = useState({ name: '', email: '', note: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', role: '', company: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (formData.name && formData.email) {
+    if (formData.name && formData.email && formData.role && formData.company) {
       setSubmitted(true)
     }
   }
@@ -22,7 +22,7 @@ function Booking() {
         <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-stretch">
           
           {/* Text Content Block */}
-          <div className="flex-1 flex flex-col justify-between text-left">
+          <div className="flex-1 flex flex-col justify-center text-left">
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 bg-signal rounded-full animate-ping" />
@@ -31,25 +31,9 @@ function Booking() {
               <h2 className="font-sans text-4xl sm:text-5xl uppercase tracking-tighter mb-4 leading-none">
                 BUILD A LIGHTER Stack.
               </h2>
-              <p className="font-sans text-charcoal/70 text-base sm:text-lg leading-relaxed max-w-md mb-8">
-                Book a 30-minute operational audit call. We will examine your manual processes, document exceptions, and assess whether a custom agentic layer is viable for your organization.
+              <p className="font-sans text-charcoal/70 text-base sm:text-lg leading-relaxed max-w-md">
+                Please fill in relevant information that will allow us to route your call appropriately.
               </p>
-            </div>
-
-            {/* Credibility Notes */}
-            <div className="flex flex-col gap-3 border-t border-charcoal/10 pt-6">
-              <div className="flex items-center gap-2.5 font-mono text-xs text-charcoal/60">
-                <Check className="w-4 h-4 text-emerald-600" />
-                <span>100% technical call with an FDE</span>
-              </div>
-              <div className="flex items-center gap-2.5 font-mono text-xs text-charcoal/60">
-                <Check className="w-4 h-4 text-emerald-600" />
-                <span>Zero sales pitch; technical viability focus</span>
-              </div>
-              <div className="flex items-center gap-2.5 font-mono text-xs text-charcoal/60">
-                <Check className="w-4 h-4 text-emerald-600" />
-                <span>Confidential NDA-protected audit parameters</span>
-              </div>
             </div>
           </div>
 
@@ -64,7 +48,7 @@ function Booking() {
 
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="font-mono text-[10px] uppercase font-bold text-charcoal/60">
-                    Contact Name
+                    Name
                   </label>
                   <input
                     id="name"
@@ -79,7 +63,7 @@ function Booking() {
 
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="email" className="font-mono text-[10px] uppercase font-bold text-charcoal/60">
-                    Work Email Address
+                    Work Email
                   </label>
                   <input
                     id="email"
@@ -93,16 +77,32 @@ function Booking() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="note" className="font-mono text-[10px] uppercase font-bold text-charcoal/60">
-                    Operational Bottleneck (Optional)
+                  <label htmlFor="role" className="font-mono text-[10px] uppercase font-bold text-charcoal/60">
+                    Your Role
                   </label>
-                  <textarea
-                    id="note"
-                    rows="3"
-                    value={formData.note}
-                    onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                    placeholder="e.g. ERP inventory updates delay cargo scheduling by 8 hours..."
-                    className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite resize-none"
+                  <input
+                    id="role"
+                    type="text"
+                    required
+                    value={formData.role}
+                    onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                    placeholder="e.g. Head of Operations"
+                    className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="company" className="font-mono text-[10px] uppercase font-bold text-charcoal/60">
+                    Company Name
+                  </label>
+                  <input
+                    id="company"
+                    type="text"
+                    required
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    placeholder="e.g. FactoryCorp"
+                    className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
                   />
                 </div>
 
@@ -114,7 +114,7 @@ function Booking() {
                 </button>
                 
                 <span className="font-mono text-[9px] text-charcoal/40 text-center block mt-1 uppercase">
-                  or calendar redirects to: <a href="https://cal.com/keystone" target="_blank" rel="noreferrer" className="text-signal hover:underline">cal.com/keystone</a>
+                  or calendar redirects to: <a href="https://cal.com/keystonesolution/discovery" target="_blank" rel="noreferrer" className="text-signal hover:underline">cal.com/keystonesolution/discovery</a>
                 </span>
               </form>
             ) : (
@@ -127,7 +127,10 @@ function Booking() {
                   Thank you, {formData.name}. We will contact you within 2 business hours at <span className="font-mono text-xs font-bold text-charcoal">{formData.email}</span> to confirm your scheduling time.
                 </p>
                 <button
-                  onClick={() => setSubmitted(false)}
+                  onClick={() => {
+                    setSubmitted(false)
+                    setFormData({ name: '', email: '', role: '', company: '' })
+                  }}
                   className="brutalist-button-secondary py-2 px-6 mt-4 text-xs font-mono"
                 >
                   SCHEDULE ANOTHER
