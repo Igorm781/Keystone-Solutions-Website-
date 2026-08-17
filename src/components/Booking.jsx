@@ -90,7 +90,6 @@ function Booking() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="e.g. Maria Santos"
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
                   />
                 </div>
@@ -105,7 +104,6 @@ function Booking() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="e.g. m.santos@factorycorp.com"
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
                   />
                 </div>
@@ -120,7 +118,6 @@ function Booking() {
                     required
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                    placeholder="e.g. Head of Operations"
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
                   />
                 </div>
@@ -135,7 +132,6 @@ function Booking() {
                     required
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="e.g. FactoryCorp"
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
                   />
                 </div>
