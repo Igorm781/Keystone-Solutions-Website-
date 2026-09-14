@@ -54,7 +54,7 @@ function Home() {
                 </div>
                 
                 <h3 className="font-sans text-2xl sm:text-3xl font-bold uppercase tracking-tight mb-4 text-left">
-                  MAINTENANCE CLERK & ASSET LABOR TRACKING OVERHAUL
+                  MAINTENANCE CLERK & PM ASSET TRACKING OVERHAUL
                 </h3>
                 
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-lg mb-6 text-left">

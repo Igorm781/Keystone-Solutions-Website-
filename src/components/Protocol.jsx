@@ -43,7 +43,7 @@ function Protocol() {
           THE ROADMAP TO AUTONOMY
         </h2>
         <p className="font-sans text-charcoal/60 text-lg max-w-xl">
-          The Goal Isn't To Automate Your Tasks, It's To Transform Your Processes. Implemented in phases to eliminate risk, maintain complete business continuity, and ensure positive return on investment.
+          The goal isn't to automate your tasks, it's to transform your processes. Implemented in phases to eliminate risk, maintain complete business continuity, and ensure positive return on investment. Turning business ideas into architected software solutions.
         </p>
       </div>
 
@@ -59,7 +59,7 @@ function Protocol() {
                 The AI Opportunity Audit
               </h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
-                We embed with mulitple team members to observe operations, list bottlenecks, and map workflows. We isolate strucutral anomalies, capture undocuments knowledge, and design high-ROI system integration plans.
+                We embed with multiple team members side-by-side to observe their operations & map their workflows. The more precise the audit, the more precise the solution, allowing us to isolate structural anomalies, capture undocumented knowledge, and design high-ROI system integration plans.
               </p>
             </div>
             <div className="font-mono text-[11px] text-charcoal/40 mt-6 md:mt-0 uppercase">

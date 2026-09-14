@@ -1,18 +1,23 @@
 export const caseStudy = {
   label: "CASE STUDY",
-  title: "Maintenance Clerk & Asset Labor Tracking Overhaul",
+  title: "MAINTENANCE CLERK & PM ASSET TRACKING OVERHAUL",
   descriptor: "Mid-Market Heavy Production Industrial Manufacturer · Maintenance Department Optimization",
   
   profile: {
     revenue: "Mid-Market Scale",
     teamSize: "Heavy Production & Maintenance Department",
-    techStack: "Legacy Asset Tracker, ERP database, Maintenance logs, Slack"
+    techStack: [
+      "Legacy Asset Tracker",
+      "ERP Database",
+      "Maintenance Logs",
+      "RedZone"
+    ]
   },
   
   challenge: {
-    description: "Our client, a mid-market heavy production industiral manufacturer, suffered from faulty tracking of labor to their assets, and also were in the need of a Maintenance Clerk. With information not being accounted for accurately, true cost of labor and true assurance of their equipment were slipping through their fingers. Legacy systems, broken and tedious workflows, and lastly, the need to fill in a position was creating fricition between departments. The Clerk Position, once payroll taxes and benefits are counted, represents roughly $54,000-$68,000 per year. Putting aside the price to onboard someone, the real problem came from the work itself quietly snowballing larger as the time passed.",
+    description: "Our client, a mid-market heavy production industrial manufacturer, suffered from faulty tracking of labor to their assets, and also were in the need of a Maintenance Clerk. With information not being accounted for accurately, true cost of labor and true assurance of their equipment were slipping through their fingers. Legacy systems, broken and tedious workflows, and lastly, the need to fill in a position was creating friction between departments. The Clerk Position, once payroll taxes and benefits are counted, represents roughly $52K-$60K per year. Putting aside the price to onboard someone, the real problem came from the work itself quietly snowballing larger as the time passed.",
     metrics: [
-      { label: "Clerk Position Cost", value: "$54k-$68k" },
+      { label: "Clerk Position Cost", value: "$52K-$60K" },
       { label: "Initial Workflows Mapped", value: "3" },
       { label: "Total Steps involved", value: "20+" }
     ]
@@ -43,7 +48,7 @@ export const caseStudy = {
       },
       {
         name: "Approval Routing Coordinator",
-        role: "Manages escalation workflows and pings managers on Slack for final human approval on high-value parts or overtime.",
+        role: "Manages escalation workflows and pings managers on RedZone for final human approval on high-value parts or overtime.",
         capability: "Determines priority based on asset criticality and budget thresholds."
       }
     ]
@@ -59,16 +64,16 @@ export const caseStudy = {
     { label: "Active Workflows", before: "3 processes", after: "2 processes", detail: "Consolidated & simplified" },
     { label: "Workflow Steps", before: "20 steps", after: "12 steps", detail: "40% reduction in steps" },
     { label: "Clerk Tasks Automated", before: "0%", after: "90%+", detail: "Handled by agentic system" },
-    { label: "Clerk Position Cost", before: "$54k-$68k", after: "$0/yr", detail: "Roles automated & saved" },
+    { label: "Clerk Position Cost", before: "$52K-$60K", after: "$0/yr", detail: "Roles automated & saved" },
     { label: "Labor Tracking Accuracy", before: "Faulty", after: "99.8%", detail: "Precise labor-to-asset mapping" },
     { label: "Process Overhead", before: "High Friction", after: "Streamlined", detail: "Final human approval step only" }
   ],
   
   roi: {
-    value: "$61,000",
-    methodology: "Based on the median clerk position cost of $61,000/year (fully loaded salary of $54,000 - $68,000) where 90%+ of the responsibilities are automated, combined with prevented labor misallocations and improved asset uptime. A conservative buffer has been applied.",
+    value: "$56,000",
+    methodology: "Based on the median clerk position cost of $56,000/year (fully loaded salary of $52K-$60K) where 90%+ of the responsibilities are automated, combined with prevented labor misallocations and improved asset uptime. A conservative buffer has been applied.",
     drivers: [
-      { driver: "Clerk Labor Savings", amount: "$58,000", method: "Automated 90%+ of the documented clerk tasks, avoiding headcount expansion." },
+      { driver: "Clerk Labor Savings", amount: "$52,000", method: "Automated 90%+ of the documented clerk tasks, avoiding headcount expansion." },
       { driver: "Labor Allocation Delta", amount: "$15,000", method: "Corrected asset labor tracking leakage and billing discrepancies." },
       { driver: "Asset Assurance Boost", amount: "$12,000", method: "Reduced equipment downtime through automated work-order dispatching." }
     ]

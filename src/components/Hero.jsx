@@ -55,7 +55,7 @@ function Hero() {
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-12 md:px-24 pb-20 md:pb-28 flex flex-col gap-6 items-start">
         <div className="font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-signal font-bold flex items-center gap-2">
           <span className="w-2 h-2 bg-signal rounded-full animate-pulse" />
-          Forward Deployed Solutions Architecture
+          Forward Deployed Engineering
         </div>
         
         {/* Massive H1 Contrast */}
@@ -107,13 +107,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Bottom subtle bar indicator */}
-      <div className="absolute bottom-6 right-8 z-10 hidden md:flex items-center gap-4 text-offwhite/40 font-mono text-xs">
-        <span>SCROLL TO AUDIT</span>
-        <div className="w-8 h-[1px] bg-offwhite/20 relative overflow-hidden">
-          <div className="absolute left-0 top-0 h-full w-1/2 bg-signal animate-[pulse-slow_2s_infinite]" />
-        </div>
-      </div>
     </section>
   )
 }

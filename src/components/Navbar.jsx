@@ -84,7 +84,7 @@ function Navbar() {
               {/* Keystone (Central Red block) */}
               <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#E63B2E" />
             </svg>
-            KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SYSTEMS</span>
+            KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SOLUTION</span>
           </Link>
 
           {/* Desktop Nav Items */}

@@ -53,9 +53,19 @@ function CaseStudy() {
           </div>
           <div className="p-5 bg-paper/20 rounded-2xl border border-charcoal/10 flex items-start gap-4">
             <Database className="w-6 h-6 text-signal mt-1 flex-shrink-0" />
-            <div>
-              <span className="font-mono text-[9px] uppercase text-charcoal/40 block">Associated Tech Stack</span>
-              <span className="font-sans font-bold text-base text-charcoal">{caseStudy.profile.techStack}</span>
+            <div className="w-full">
+              <span className="font-mono text-[9px] uppercase text-charcoal/40 block mb-2">Associated Tech Stack</span>
+              <div className="flex flex-wrap gap-1.5">
+                {(Array.isArray(caseStudy.profile.techStack) ? caseStudy.profile.techStack : [caseStudy.profile.techStack]).map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-offwhite border border-charcoal/15 font-mono text-xs font-semibold text-charcoal shadow-sm"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-signal" />
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
