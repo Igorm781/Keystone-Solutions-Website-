@@ -1,11 +1,31 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault()
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => {
+        const element = document.getElementById(targetId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    } else {
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
   }
 
   return (
@@ -46,7 +66,7 @@ function Footer() {
                 {/* Keystone (Central Red block) */}
                 <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#E63B2E" />
               </svg>
-              KEYSTONE
+              KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SOLUTION</span>
             </Link>
             <p className="font-sans text-sm text-offwhite/60 max-w-sm leading-relaxed">
               Process architect and forward-deployed engineering for production manufacturers. We build custom agentic systems that run operations end-to-end.
@@ -59,9 +79,9 @@ function Footer() {
             <div className="grid grid-cols-2 gap-2 font-mono text-sm">
               <Link to="/" onClick={handleScrollToTop} className="hover:text-signal transition-colors">Home</Link>
               <Link to="/case-study" className="hover:text-signal transition-colors">Case Study</Link>
-              <a href="#process" className="hover:text-signal transition-colors">Process</a>
-              <a href="#faq" className="hover:text-signal transition-colors">FAQ</a>
-              <a href="#book" className="hover:text-signal transition-colors">Book a Call</a>
+              <a href="#process" onClick={(e) => handleNavClick(e, 'process')} className="hover:text-signal transition-colors">Process</a>
+              <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="hover:text-signal transition-colors">FAQ</a>
+              <a href="#book" onClick={(e) => handleNavClick(e, 'book')} className="hover:text-signal transition-colors">Book a Call</a>
             </div>
           </div>
           
@@ -89,7 +109,7 @@ function Footer() {
         {/* Footer Sub-Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 gap-4 font-mono text-xs text-offwhite/40">
           <div>
-            © {currentYear} Keystone Systems. All rights reserved.
+            © {currentYear} Keystone Solution. All rights reserved.
           </div>
           <div className="flex gap-6">
             <a href="#privacy" className="hover:text-offwhite transition-colors">Privacy Policy</a>

@@ -47,7 +47,7 @@ function CaseStudy() {
           <div className="p-5 bg-paper/20 rounded-2xl border border-charcoal/10 flex items-start gap-4">
             <Clock className="w-6 h-6 text-signal mt-1 flex-shrink-0" />
             <div>
-              <span className="font-mono text-[9px] uppercase text-charcoal/40 block">Logistics Department Size</span>
+              <span className="font-mono text-[9px] uppercase text-charcoal/40 block">Target Department Scope</span>
               <span className="font-sans font-bold text-base text-charcoal">{caseStudy.profile.teamSize}</span>
             </div>
           </div>
@@ -250,6 +250,21 @@ function CaseStudy() {
                       <td className="p-3 text-charcoal/70 leading-relaxed">{driver.method}</td>
                     </tr>
                   ))}
+                  <tr className="bg-paper/40 font-mono text-[11px] border-t-2 border-charcoal/20">
+                    <td className="p-3 font-bold uppercase">Gross Projected Savings</td>
+                    <td className="p-3 font-bold text-charcoal">{caseStudy.roi.gross}</td>
+                    <td className="p-3 text-charcoal/60">Sum of identified gross value drivers</td>
+                  </tr>
+                  <tr className="bg-amber-50/50 font-mono text-[11px] text-amber-900">
+                    <td className="p-3 font-bold uppercase">15% Discount Buffer</td>
+                    <td className="p-3 font-bold text-amber-700">{caseStudy.roi.discount}</td>
+                    <td className="p-3 text-amber-800/70">Conservative variance buffer deducted</td>
+                  </tr>
+                  <tr className="bg-charcoal text-offwhite font-mono text-xs font-bold">
+                    <td className="p-3 uppercase">Net Realized Savings</td>
+                    <td className="p-3 text-emerald-400">{caseStudy.roi.value}</td>
+                    <td className="p-3 text-offwhite/70">Conservative Year-One Value</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

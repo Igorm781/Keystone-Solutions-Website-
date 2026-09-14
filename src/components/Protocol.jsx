@@ -155,7 +155,7 @@ function Protocol() {
                 Deployment & Autonomous Scale
               </h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
-                We launch custom agents into your enterprise, buliding on top of your exsisting software. We log exceptions in real-time, scale up pipeline throughput, and optimize agent triggers.
+                We launch custom agents into your enterprise, building on top of your existing software. We log exceptions in real-time, scale up pipeline throughput, and optimize agent triggers.
               </p>
             </div>
             <div className="font-mono text-[11px] text-charcoal/40 mt-6 md:mt-0 uppercase">

@@ -200,7 +200,7 @@ function Features() {
               <h3 className="font-mono text-xs uppercase tracking-wider font-bold">Scale Without Hiring</h3>
             </div>
             <p className="font-sans text-sm text-charcoal/70 mb-8">
-              Operational output increases without adding headcount ot new coordination layers.
+              Operational output increases without adding headcount or new coordination layers.
             </p>
           </div>
 

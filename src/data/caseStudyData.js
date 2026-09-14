@@ -56,8 +56,8 @@ export const caseStudy = {
   
   timeline: [
     { month: "Month 01", focus: "Maintenance Audit", result: "Shadowed maintenance workflows on the floor, mapping 3 manual processes and logging over 20 steps." },
-    { month: "Month 02", focus: "Workflow Re-engineering", result: "Completed the 45-day audit. Designed 2 streamlined workflows reducing the total steps down to 12." },
-    { month: "Month 03", focus: "Agentic Layer Deployment", result: "Deployed system handling 90%+ of clerk responsibilities with human-in-the-loop approval." }
+    { month: "Month 02", focus: "Re-engineering & Pilot Agent", result: "Completed audit, streamlined steps down to 12, and launched initial Labor Tracking pilot agent to prove floor telemetry." },
+    { month: "Month 03", focus: "Full Operating Layer Deployment", result: "Scaled multi-agent system handling 90%+ of clerk responsibilities with human-in-the-loop approval." }
   ],
   
   results: [
@@ -70,10 +70,12 @@ export const caseStudy = {
   ],
   
   roi: {
-    value: "$56,000",
-    methodology: "Based on the median clerk position cost of $56,000/year (fully loaded salary of $52K-$60K) where 90%+ of the responsibilities are automated, combined with prevented labor misallocations and improved asset uptime. A conservative buffer has been applied.",
+    value: "$67,000",
+    gross: "$79,000",
+    discount: "-$12,000",
+    methodology: "Gross savings across direct clerk labor avoidance ($52,000), labor allocation correction ($15,000), and asset assurance boost ($12,000) total $79,000. Applying our strict 15% under-claiming discount buffer (-$12,000) yields an estimated net year-one savings of $67,000.",
     drivers: [
-      { driver: "Clerk Labor Savings", amount: "$52,000", method: "Automated 90%+ of the documented clerk tasks, avoiding headcount expansion." },
+      { driver: "Clerk Labor Savings", amount: "$52,000", method: "Automated 90%+ of documented clerk tasks based on $52K-$60K salary range." },
       { driver: "Labor Allocation Delta", amount: "$15,000", method: "Corrected asset labor tracking leakage and billing discrepancies." },
       { driver: "Asset Assurance Boost", amount: "$12,000", method: "Reduced equipment downtime through automated work-order dispatching." }
     ]

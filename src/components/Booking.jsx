@@ -23,7 +23,7 @@ function Booking() {
           Email: formData.email,
           Role: formData.role,
           Company: formData.company,
-          _subject: "New Schedule Request - Keystone Solutions",
+          _subject: "New Schedule Request - Keystone Solution",
           _captcha: "false"
         })
       })

@@ -11,7 +11,7 @@ function FAQ() {
     },
     {
       q: "How long does a full deployment take?",
-      a: "A typical engagement runs 4 to 8 weeks from initial audit to production launch, depending on the complexity of your systems in place. We target shipping your first functioning agent in Month 2 to prove value early."
+      a: "A typical engagement runs 8 to 12 weeks from initial audit to full production rollout, depending on the complexity of your systems in place. We target shipping your first pilot agent in Month 2 to prove value early before expanding to full multi-agent deployment in Month 3."
     },
     {
       q: "How much of our team's time is required?",
