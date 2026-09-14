@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="2000" height="2000">
+  
+  <g transform="translate(55, 71.25) scale(16.25)">
+    <path d="M 2 12 L 4.5 12 L 4.5 19 L 2 19 Z" fill="#000000" />
+    <path d="M 3.2 7.7 L 5.6 5 L 7 9.5 L 5 11.5 Z" fill="#000000" />
+    <path d="M 6 4.5 L 9.5 3.3 L 10.3 8.3 L 7.3 9 Z" fill="#000000" />
+    <path d="M 19.5 12 L 22 12 L 22 19 L 19.5 19 Z" fill="#000000" />
+    <path d="M 18.4 5 L 20.8 7.7 L 19 11.5 L 17 9.5 Z" fill="#000000" />
+    <path d="M 14.5 3.3 L 18 4.5 L 16.7 9 L 13.7 8.3 Z" fill="#000000" />
+    <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#000000" />
+  </g>
+</svg>
