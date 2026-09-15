@@ -34,29 +34,29 @@ export const caseStudy = {
   },
   
   architecture: {
-    description: "Instead of hiring additional staff or performing a full system migration, we built a lightweight, model-agnostic agentic operating layer on top of their existing databases and physical logs. We deployed our specialized models:",
+    description: "Instead of hiring additional staff or performing a full system migration, we built a lightweight, model-agnostic agentic operating layer on top of their existing databases and physical logs. We deployed our specialized model:",
     agents: [
       {
-        name: "Labor Tracking",
-        role: "Automates the capture of labor hours and directly maps them to physical production assets in real-time.",
-        capability: "99.4% matching accuracy across handwritten timesheets and digital check-ins."
+        name: "Master PM Tracking",
+        role: "Automates the capture of labor hours from each mechanic and directly maps them to the physical production asset.",
+        capability: "Automated labor-to-asset mapping from mechanic entries."
       },
       {
-        name: "Maintenance Dispatch",
-        role: "Automatically schedules preventive work orders and flags anomalies in equipment telemetry or maintenance schedules.",
-        capability: "Interfaces with floor monitors to predict maintenance events before failure."
+        name: "Labor Discrepancies",
+        role: "Flags any anomalies found in the generated Work Orders from mechanics, and waits for human-in-the-loop approval before posting records.",
+        capability: "Work order anomaly detection & human-in-the-loop verification."
       },
       {
-        name: "Approval Routing Coordinator",
-        role: "Manages escalation workflows and pings managers on RedZone for final human approval on high-value parts or overtime.",
-        capability: "Determines priority based on asset criticality and budget thresholds."
+        name: "Material Journal Reconciliation",
+        role: "Accurately tracks usage of spare parts while maintaining minimums in stock. Flags & notifies users of low counts with extended lead times.",
+        capability: "Spare parts consumption tracking & automated inventory alerts."
       }
     ]
   },
   
   timeline: [
     { month: "Month 01", focus: "Maintenance Audit", result: "Shadowed maintenance workflows on the floor, mapping 3 manual processes and logging over 20 steps." },
-    { month: "Month 02", focus: "Re-engineering & Pilot Agent", result: "Completed audit, streamlined steps down to 12, and launched initial Labor Tracking pilot agent to prove floor telemetry." },
+    { month: "Month 02", focus: "Re-engineering & Pilot Agent", result: "Completed audit, streamlined steps down to 12, and launched initial Master PM Tracking pilot agent to prove floor telemetry." },
     { month: "Month 03", focus: "Full Operating Layer Deployment", result: "Scaled multi-agent system handling 90%+ of clerk responsibilities with human-in-the-loop approval." }
   ],
   
