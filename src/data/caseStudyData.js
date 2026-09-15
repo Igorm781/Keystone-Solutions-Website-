@@ -81,5 +81,5 @@ export const caseStudy = {
     ]
   },
   
-  crossImpact: "Importantly, automated tracking cleared reporting bottlenecks 65% faster. This third-order effect resulted in maintenance dispatchers hitting tight schedules consistently. Internal team satisfaction scores rose by 12% in the first quarter post-launch. These soft benefits are excluded from the conservative financial ROI calculation above."
+  crossImpact: "Importantly, automated tracking cleared reporting bottlenecks 65% faster. This third-order effect resulted in freeing up time for the maintenance coordinator to focus on more high-value tasks. Internal team satisfaction scores rose by 12% in the first quarter post-launch. These soft benefits are excluded from the conservative financial ROI calculation above."
 };
