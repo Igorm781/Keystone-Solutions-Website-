@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { ArrowUpRight } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -87,10 +87,21 @@ function Footer() {
           
           {/* Column 3: Contact & Status */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-mono text-xs font-bold uppercase tracking-wider text-signal">System Status</h4>
+            <h4 className="font-mono text-xs font-bold uppercase tracking-wider text-signal">Contact & Operations</h4>
             
+            <div className="flex flex-col gap-1">
+              <span className="font-mono text-[10px] text-offwhite/50 uppercase">Direct Architecture Inquiries</span>
+              <a 
+                href="mailto:Architect@Keystonesolution.co" 
+                className="font-mono text-sm text-offwhite hover:text-signal transition-colors font-bold tracking-tight inline-flex items-center gap-1.5"
+              >
+                <Mail className="w-3.5 h-3.5 text-signal" />
+                Architect@Keystonesolution.co
+              </a>
+            </div>
+
             {/* Status indicator with pulsing green dot */}
-            <div className="flex items-center gap-3 px-4 py-2 border border-offwhite/10 bg-offwhite/5 rounded-xl w-fit">
+            <div className="flex items-center gap-3 px-4 py-2 border border-offwhite/10 bg-offwhite/5 rounded-xl w-fit mt-1">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
@@ -98,9 +109,9 @@ function Footer() {
               <span className="font-mono text-xs font-bold tracking-wider text-emerald-400">SYSTEM OPERATIONAL</span>
             </div>
             
-            <p className="font-mono text-xs text-offwhite/50 mt-2">
-              Core Engine: React 19 + GSAP 3 + Tailwind CSS<br />
-              Environment: Production Sandbox
+            <p className="font-mono text-xs text-offwhite/50">
+              Forward Deployed Process Architecture<br />
+              Zero migrations • Full code ownership
             </p>
           </div>
           
@@ -112,8 +123,8 @@ function Footer() {
             © {currentYear} Keystone Solution. All rights reserved.
           </div>
           <div className="flex gap-6">
-            <a href="#privacy" className="hover:text-offwhite transition-colors">Privacy Policy</a>
-            <a href="#terms" className="hover:text-offwhite transition-colors">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-offwhite transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-offwhite transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

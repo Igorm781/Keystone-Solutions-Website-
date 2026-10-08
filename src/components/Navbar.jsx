@@ -42,14 +42,14 @@ function Navbar() {
     }
   }
 
-  const isCaseStudyPage = location.pathname === '/case-study'
+  const isSubPage = location.pathname !== '/'
 
   return (
     <header className="w-full">
       {/* Navbar Container */}
       <nav
         className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl px-6 py-3 rounded-full border transition-all duration-300 ${
-          isScrolled || isCaseStudyPage
+          isScrolled || isSubPage
             ? 'bg-offwhite/90 backdrop-blur-md border-charcoal shadow-brutalist text-charcoal'
             : 'bg-transparent border-white/20 text-offwhite'
         }`}
@@ -99,7 +99,7 @@ function Navbar() {
             <Link
               to="/case-study"
               className={`hover:text-signal transition-colors duration-200 py-1 ${
-                isCaseStudyPage ? 'text-signal border-b border-signal' : ''
+                location.pathname === '/case-study' ? 'text-signal border-b border-signal' : ''
               }`}
             >
               Case Study
@@ -119,7 +119,7 @@ function Navbar() {
               href="#book"
               onClick={(e) => handleNavClick(e, 'book')}
               className={`inline-flex items-center gap-1.5 px-5 py-2 rounded-full border font-mono text-xs font-bold uppercase transition-all duration-300 scale-100 hover:scale-103 ${
-                isScrolled || isCaseStudyPage
+                isScrolled || isSubPage
                   ? 'bg-signal text-offwhite border-charcoal hover:bg-charcoal hover:text-offwhite hover:shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]'
                   : 'bg-offwhite text-charcoal border-transparent hover:bg-signal hover:text-offwhite'
               }`}
@@ -137,7 +137,7 @@ function Navbar() {
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled || isCaseStudyPage ? 'text-charcoal' : 'text-offwhite'}`} />
+              <Menu className={`w-6 h-6 ${isScrolled || isSubPage ? 'text-charcoal' : 'text-offwhite'}`} />
             )}
           </button>
         </div>

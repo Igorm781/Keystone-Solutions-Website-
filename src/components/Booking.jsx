@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Calendar, PhoneCall, ArrowRight } from 'lucide-react'
 
 function Booking() {
@@ -12,7 +13,7 @@ function Booking() {
     if (formData.name && formData.email && formData.role && formData.company) {
       setIsSubmitting(true)
       setError('')
-      fetch("https://formsubmit.co/ajax/zo.misc123@gmail.com", {
+      fetch("https://formsubmit.co/ajax/architect@keystonesolution.co", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -24,6 +25,7 @@ function Booking() {
           Role: formData.role,
           Company: formData.company,
           _subject: "New Schedule Request - Keystone Solution",
+          _replyto: formData.email,
           _captcha: "false"
         })
       })
@@ -33,11 +35,14 @@ function Booking() {
         }
         return response.json()
       })
-      .then(() => {
+      .then((data) => {
+        if (data && (data.success === 'false' || data.success === false)) {
+          throw new Error(data.message || 'Failed to submit form')
+        }
         setSubmitted(true)
       })
       .catch((err) => {
-        setError('Something went wrong. Please try again or use the calendar link.')
+        setError(err.message && err.message !== 'Failed to submit form' ? err.message : 'Something went wrong. Please try again or use the calendar link.')
         console.error(err)
       })
       .finally(() => {
@@ -86,8 +91,10 @@ function Booking() {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
                     required
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
@@ -100,8 +107,10 @@ function Booking() {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     required
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
@@ -114,8 +123,10 @@ function Booking() {
                   </label>
                   <input
                     id="role"
+                    name="role"
                     type="text"
                     required
+                    autoComplete="organization-title"
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
@@ -128,8 +139,10 @@ function Booking() {
                   </label>
                   <input
                     id="company"
+                    name="company"
                     type="text"
                     required
+                    autoComplete="organization"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl brutalist-border font-sans text-sm focus:outline-none focus:ring-1 focus:ring-signal focus:bg-offwhite"
@@ -149,10 +162,18 @@ function Booking() {
                     {error}
                   </p>
                 )}
+
+                <p className="font-mono text-[10px] text-charcoal/50 text-center leading-normal mt-1">
+                  By submitting, you agree to our{' '}
+                  <Link to="/privacy" className="text-signal hover:underline">Privacy Policy</Link>
+                  {' '}and{' '}
+                  <Link to="/terms" className="text-signal hover:underline">Terms of Service</Link>.
+                </p>
                 
-                <span className="font-mono text-[9px] text-charcoal/40 text-center block mt-1 uppercase">
-                  or calendar redirects to: <a href="https://cal.com/keystonesolution/discovery" target="_blank" rel="noreferrer" className="text-signal hover:underline">cal.com/keystonesolution/discovery</a>
-                </span>
+                <div className="flex flex-col gap-1 text-center mt-2 pt-2 border-t border-charcoal/10 font-mono text-[10px] text-charcoal/60 uppercase">
+                  <span>Direct Booking: <a href="https://cal.com/keystonesolution/discovery" target="_blank" rel="noreferrer" className="text-signal hover:underline font-bold">cal.com/keystonesolution/discovery</a></span>
+                  <span>Direct Inquiries: <a href="mailto:Architect@Keystonesolution.co" className="text-signal hover:underline font-bold">Architect@Keystonesolution.co</a></span>
+                </div>
               </form>
             ) : (
               <div className="flex flex-col items-center justify-center text-center h-full py-12 gap-4">
@@ -161,7 +182,7 @@ function Booking() {
                 </div>
                 <h3 className="font-sans text-xl font-bold uppercase tracking-tight">Audit Requested</h3>
                 <p className="font-sans text-sm text-charcoal/60 max-w-xs">
-                  Thank you, {formData.name}. We will contact you within 2 business hours at <span className="font-mono text-xs font-bold text-charcoal">{formData.email}</span> to confirm your scheduling time.
+                  Thank you, {formData.name}. We will contact you within 2 business hours at <span className="font-mono text-xs font-bold text-charcoal">{formData.email}</span> to confirm your scheduling time. You can also reach our team directly at <a href="mailto:Architect@Keystonesolution.co" className="text-signal font-mono font-bold hover:underline">Architect@Keystonesolution.co</a>.
                 </p>
                 <button
                   onClick={() => {

@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { ArrowRight, FileText } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
@@ -10,6 +11,22 @@ import Booking from '../components/Booking'
 import Footer from '../components/Footer'
 
 function Home() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (location.hash === '#privacy') {
+      navigate('/privacy', { replace: true })
+    } else if (location.hash === '#terms') {
+      navigate('/terms', { replace: true })
+    } else if (location.hash) {
+      const id = location.hash.replace('#', '')
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [location, navigate])
   return (
     <div className="min-h-screen bg-offwhite text-charcoal relative flex flex-col items-center">
       {/* Top Navbar */}

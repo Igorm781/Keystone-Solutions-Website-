@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Clock, Server, CheckCircle, HelpCircle, DollarSign, Database, TrendingUp, AlertTriangle } from 'lucide-react'
+import { ArrowLeft, Clock, DollarSign, Database, AlertTriangle } from 'lucide-react'
 import { caseStudy } from '../data/caseStudyData'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
