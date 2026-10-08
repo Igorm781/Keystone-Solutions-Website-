@@ -29,12 +29,12 @@ function Footer() {
   }
 
   return (
-    <footer className="w-full bg-charcoal text-offwhite border-t-2 border-charcoal rounded-t-[3rem] relative overflow-hidden pt-16 pb-8 px-6 sm:px-12 md:px-24">
+    <footer className="w-full bg-charcoal text-offwhite border-t-2 border-charcoal rounded-t-3xl sm:rounded-t-[3rem] relative overflow-hidden pt-14 sm:pt-16 pb-8 px-4 sm:px-6 md:px-8">
       {/* Background grid texture overlay */}
       <div className="absolute inset-0 brutalist-grid-dark pointer-events-none opacity-20" />
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-offwhite/10">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 pb-12 border-b border-offwhite/10">
           
           {/* Column 1: Brand & Tagline */}
           <div className="flex flex-col gap-4">

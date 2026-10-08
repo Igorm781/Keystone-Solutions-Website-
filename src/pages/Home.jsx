@@ -47,19 +47,19 @@ function Home() {
         <Philosophy />
 
         {/* 5. Case Study Homepage Teaser Section */}
-        <section id="proof" className="py-24 px-6 max-w-5xl mx-auto w-full text-left">
-          <div className="flex flex-col gap-4 mb-16">
+        <section id="proof" className="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full text-left">
+          <div className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-16">
             <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">CASE STUDY IN-PROGRESS</span>
-            <h2 className="font-sans text-4xl sm:text-5xl uppercase tracking-tighter">
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter">
               PROOF OF CONCEPT
             </h2>
-            <p className="font-sans text-charcoal/60 text-lg max-w-xl">
+            <p className="font-sans text-charcoal/60 text-base sm:text-lg max-w-xl">
               We focus on measurable outcomes. Here is how a custom agentic operating layer optimized operations for a heavy industrial manufacturer.
             </p>
           </div>
 
           {/* Teaser Box */}
-          <div className="brutalist-card p-8 bg-offwhite relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-stretch gap-8">
+          <div className="brutalist-card rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-8 md:p-10 bg-offwhite relative overflow-hidden flex flex-col lg:flex-row justify-between items-start lg:items-stretch gap-8">
             <div className="absolute top-0 right-0 w-24 h-24 bg-signal/5 rounded-bl-full pointer-events-none" />
             
             {/* Core copy */}

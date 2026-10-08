@@ -69,34 +69,34 @@ function Features() {
 
 
   return (
-    <section id="features" className="py-24 px-6 max-w-7xl mx-auto w-full">
-      <div className="flex flex-col gap-4 mb-16 text-left max-w-2xl">
+    <section id="features" className="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+      <div className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-16 text-left max-w-2xl">
         <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">CORE CAPABILITIES</span>
-        <h2 className="font-sans text-4xl sm:text-5xl uppercase tracking-tighter">
+        <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter">
           INTELLIGENT SYSTEMS, NOT POINT FIXES
         </h2>
-        <p className="font-sans text-charcoal/60 text-lg">
+        <p className="font-sans text-charcoal/60 text-base sm:text-lg">
           We construct tailored, automated workflows that adapt to your raw data, resolve exceptions, and synchronize your production schedule.
         </p>
       </div>
 
       {/* Grid of 3 Interactive Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* Card 1: Diagnostic Shuffler */}
-        <div className="brutalist-card flex flex-col justify-between h-[450px]">
+        <div className="brutalist-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between min-h-[440px] md:min-h-[460px] h-auto">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <Zap className="w-5 h-5 text-signal" />
               <h3 className="font-mono text-xs uppercase tracking-wider font-bold">Reduce Operational Overhead</h3>
             </div>
-            <p className="font-sans text-sm text-charcoal/70 mb-8">
+            <p className="font-sans text-sm text-charcoal/70 mb-6">
               AI agents remove manual coordination, approvals, and repetitive operational work across systems.
             </p>
           </div>
           
           {/* Deck Container */}
-          <div className="relative h-56 w-full flex justify-center items-center">
+          <div className="relative h-48 sm:h-52 w-full flex justify-center items-center">
             {shuffleItems.map((item, index) => {
               // Stack configuration
               let zIndex = 0
@@ -111,12 +111,12 @@ function Features() {
                 opacity = 1
               } else if (index === 1) {
                 zIndex = 20
-                translateY = 16
+                translateY = 14
                 scale = 0.95
                 opacity = 0.7
               } else {
                 zIndex = 10
-                translateY = 32
+                translateY = 28
                 scale = 0.9
                 opacity = 0.4
               }
@@ -129,7 +129,7 @@ function Features() {
                     transform: `translateY(${translateY}px) scale(${scale})`,
                     opacity,
                   }}
-                  className="absolute w-[90%] max-w-[280px] p-4 bg-offwhite brutalist-border shadow-brutalist rounded-2xl transition-all duration-500 ease-in-out flex flex-col justify-between h-36"
+                  className="absolute w-[94%] max-w-[270px] p-3.5 sm:p-4 bg-offwhite brutalist-border shadow-brutalist rounded-2xl transition-all duration-500 ease-in-out flex flex-col justify-between h-34 sm:h-36"
                 >
                   <div className="flex justify-between items-start">
                     <span className="font-mono text-[9px] bg-charcoal text-offwhite px-2 py-0.5 rounded font-bold">
@@ -152,19 +152,19 @@ function Features() {
         </div>
 
         {/* Card 2: Telemetry Typewriter */}
-        <div className="brutalist-card flex flex-col justify-between h-[450px]">
+        <div className="brutalist-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between min-h-[440px] md:min-h-[460px] h-auto">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <Terminal className="w-5 h-5 text-signal" />
               <h3 className="font-mono text-xs uppercase tracking-wider font-bold">Telemetry Live Feed</h3>
             </div>
-            <p className="font-sans text-sm text-charcoal/70 mb-6">
+            <p className="font-sans text-sm text-charcoal/70 mb-5">
               Continuous background audit logging. Directly traces raw physical ingestion files, processing states, and API triggers.
             </p>
           </div>
 
           {/* Terminal Box */}
-          <div className="bg-charcoal text-emerald-400 p-4 rounded-2xl brutalist-border font-mono text-xs text-left h-64 flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-charcoal text-emerald-400 p-4 rounded-2xl brutalist-border font-mono text-xs text-left h-56 sm:h-60 flex flex-col justify-between relative overflow-hidden">
             {/* Topbar */}
             <div className="flex justify-between items-center pb-2 border-b border-emerald-500/20 mb-2">
               <div className="flex items-center gap-1.5">
@@ -193,19 +193,19 @@ function Features() {
         </div>
 
         {/* Card 3: Scale Without Hiring */}
-        <div className="brutalist-card flex flex-col justify-between h-[450px] relative">
+        <div className="brutalist-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between min-h-[440px] md:min-h-[460px] h-auto relative">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <TrendingUp className="w-5 h-5 text-signal" />
               <h3 className="font-mono text-xs uppercase tracking-wider font-bold">Scale Without Hiring</h3>
             </div>
-            <p className="font-sans text-sm text-charcoal/70 mb-8">
+            <p className="font-sans text-sm text-charcoal/70 mb-6">
               Operational output increases without adding headcount or new coordination layers.
             </p>
           </div>
 
           {/* Throughput Telemetry Container */}
-          <div className="relative border border-charcoal/10 rounded-2xl bg-paper/30 p-6 flex flex-col justify-between h-56 overflow-hidden text-left">
+          <div className="relative border border-charcoal/10 rounded-2xl bg-paper/30 p-4 sm:p-5 flex flex-col justify-between h-52 sm:h-56 overflow-hidden text-left">
             <div className="flex justify-between items-center border-b border-charcoal/10 pb-3 mb-2">
               <span className="font-mono text-[9px] uppercase text-charcoal/40 font-bold">Throughput Telemetry</span>
               <div className="flex items-center gap-1.5 font-mono text-[9px] font-bold text-signal bg-signal/15 px-2 py-0.5 rounded">

@@ -42,7 +42,7 @@ function Booking() {
         setSubmitted(true)
       })
       .catch((err) => {
-        setError(err.message && err.message !== 'Failed to submit form' ? err.message : 'Something went wrong. Please try again or use the calendar link.')
+        setError(err.message && err.message !== 'Failed to submit form' ? err.message : 'Something went wrong. Please try again or contact us directly.')
         console.error(err)
       })
       .finally(() => {
@@ -52,13 +52,13 @@ function Booking() {
   }
 
   return (
-    <section id="book" className="py-24 px-6 max-w-5xl mx-auto w-full">
-      <div className="relative w-full p-8 md:p-12 bg-offwhite brutalist-border rounded-[3rem] shadow-brutalist overflow-hidden">
+    <section id="book" className="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+      <div className="relative w-full p-6 sm:p-8 md:p-12 bg-offwhite brutalist-border rounded-3xl sm:rounded-[3rem] shadow-brutalist overflow-hidden">
         
         {/* Grid helper */}
         <div className="absolute inset-0 brutalist-grid opacity-10 pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-stretch">
+        <div className="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
           
           {/* Text Content Block */}
           <div className="flex-1 flex flex-col justify-center text-left">
@@ -67,7 +67,7 @@ function Booking() {
                 <span className="w-2 h-2 bg-signal rounded-full animate-ping" />
                 Next Action
               </span>
-              <h2 className="font-sans text-4xl sm:text-5xl uppercase tracking-tighter mb-4 leading-none">
+              <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter mb-4 leading-none">
                 BUILD A LIGHTER Stack.
               </h2>
               <p className="font-sans text-charcoal/70 text-base sm:text-lg leading-relaxed max-w-md">
@@ -76,8 +76,8 @@ function Booking() {
             </div>
           </div>
 
-          {/* Cal.com Embed Placeholder / Form Card */}
-          <div className="w-full lg:w-[450px] p-6 bg-paper/30 brutalist-border rounded-3xl flex flex-col justify-between relative">
+          {/* Form Card */}
+          <div className="w-full lg:w-[440px] p-5 sm:p-6 bg-paper/30 brutalist-border rounded-2xl sm:rounded-3xl flex flex-col justify-between relative">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-left">
                 <div className="flex items-center gap-2 border-b border-charcoal/10 pb-3 mb-2">
@@ -163,15 +163,7 @@ function Booking() {
                   </p>
                 )}
 
-                <p className="font-mono text-[10px] text-charcoal/50 text-center leading-normal mt-1">
-                  By submitting, you agree to our{' '}
-                  <Link to="/privacy" className="text-signal hover:underline">Privacy Policy</Link>
-                  {' '}and{' '}
-                  <Link to="/terms" className="text-signal hover:underline">Terms of Service</Link>.
-                </p>
-                
-                <div className="flex flex-col gap-1 text-center mt-2 pt-2 border-t border-charcoal/10 font-mono text-[10px] text-charcoal/60 uppercase">
-                  <span>Direct Booking: <a href="https://cal.com/keystonesolution/discovery" target="_blank" rel="noreferrer" className="text-signal hover:underline font-bold">cal.com/keystonesolution/discovery</a></span>
+                <div className="text-center mt-3 pt-3 border-t border-charcoal/10 font-mono text-[10px] sm:text-[11px] text-charcoal/60 uppercase">
                   <span>Direct Inquiries: <a href="mailto:Architect@Keystonesolution.co" className="text-signal hover:underline font-bold">Architect@Keystonesolution.co</a></span>
                 </div>
               </form>

@@ -12,7 +12,7 @@ function PrivacyPolicy() {
     <div className="min-h-screen bg-offwhite text-charcoal relative flex flex-col items-center">
       <Navbar />
 
-      <main className="w-full max-w-4xl mx-auto px-6 sm:px-12 pt-36 pb-24 flex-grow text-left">
+      <main className="w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-36 pb-16 sm:pb-24 flex-grow text-left">
         {/* Navigation Bar */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-charcoal/10">
           <Link
@@ -153,8 +153,8 @@ function PrivacyPolicy() {
                 <span className="font-sans text-xs sm:text-sm text-charcoal/70">Form submissions are transmitted via encrypted HTTPS endpoints (FormSubmit API) directly to our private corporate routing inbox (<code className="font-mono text-xs">Architect@Keystonesolution.co</code>).</span>
               </div>
               <div className="border-l-2 border-signal pl-4 py-1">
-                <span className="font-mono text-xs font-bold uppercase text-charcoal block">Calendar Booking Layer</span>
-                <span className="font-sans text-xs sm:text-sm text-charcoal/70">Direct appointment scheduling is facilitated through Cal.com, which operates under enterprise-grade encryption and privacy controls.</span>
+                <span className="font-mono text-xs font-bold uppercase text-charcoal block">Inquiry & Scheduling Communications</span>
+                <span className="font-sans text-xs sm:text-sm text-charcoal/70">Client appointment scheduling and communication are conducted directly via secure encrypted corporate communications protocols.</span>
               </div>
               <div className="border-l-2 border-signal pl-4 py-1">
                 <span className="font-mono text-xs font-bold uppercase text-charcoal block">Hosting & Content Delivery</span>

@@ -34,7 +34,7 @@ function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative h-screen w-full flex flex-col justify-end bg-charcoal text-offwhite overflow-hidden"
+      className="relative min-h-[100dvh] w-full flex flex-col justify-center items-center bg-charcoal text-offwhite overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-40 md:pb-24"
     >
       {/* Background Image with Brutalist Industrial Texture & heavy gradient overlay */}
       <div 
@@ -52,23 +52,23 @@ function Hero() {
       <div className="absolute inset-0 brutalist-grid-dark pointer-events-none opacity-10" />
 
       {/* Hero Content Area */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-12 md:px-24 pb-20 md:pb-28 flex flex-col gap-6 items-start">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 flex flex-col gap-5 sm:gap-6 items-start">
         <div className="font-mono text-xs sm:text-sm uppercase tracking-[0.25em] text-signal font-bold flex items-center gap-2">
           <span className="w-2 h-2 bg-signal rounded-full animate-pulse" />
           Forward Deployed Engineering
         </div>
         
         {/* Massive H1 Contrast */}
-        <h1 className="leading-[1.1] max-w-4xl text-left select-none">
+        <h1 className="leading-[1.05] max-w-4xl text-left select-none">
           <span
             ref={title1Ref}
-            className="block font-sans font-bold text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter"
+            className="block font-sans font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter"
           >
             Orchestrate the
           </span>
           <span
             ref={title2Ref}
-            className="block font-serif italic text-6xl sm:text-8xl md:text-9xl text-signal mt-2 sm:mt-4 pl-2 sm:pl-4"
+            className="block font-serif italic text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[8rem] text-signal mt-1 sm:mt-3 pl-1 sm:pl-3 leading-[0.95]"
           >
             Industrial Process.
           </span>
@@ -77,7 +77,7 @@ function Hero() {
         {/* Subhead descriptor */}
         <p
           ref={subRef}
-          className="font-sans text-base sm:text-lg md:text-xl text-offwhite/70 max-w-xl leading-relaxed text-left mt-2"
+          className="font-sans text-sm sm:text-base md:text-lg text-offwhite/75 max-w-xl leading-relaxed text-left mt-1 sm:mt-2"
         >
           Custom agentic implementations tailored to your business. Architecting and automating your workflows from end-to-end. You own the code.
         </p>
@@ -85,7 +85,7 @@ function Hero() {
         {/* CTA triggers */}
         <div
           ref={ctaRef}
-          className="flex flex-wrap gap-4 mt-4 w-full"
+          className="flex flex-wrap gap-3 sm:gap-4 mt-2 sm:mt-4 w-full"
         >
           <a
             href="#book"

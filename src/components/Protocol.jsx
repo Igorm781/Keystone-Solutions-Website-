@@ -9,22 +9,25 @@ function Protocol() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray('.protocol-card')
-      cards.forEach((card, index) => {
-        // If there's a next card, shrink and fade this card when the next one stacks over it
-        if (index < cards.length - 1) {
-          gsap.to(card, {
-            scale: 0.9,
-            opacity: 0.5,
-            filter: 'blur(6px)',
-            scrollTrigger: {
-              trigger: cards[index + 1],
-              start: 'top 80%',
-              end: 'top 50%',
-              scrub: true,
-            }
-          })
-        }
+      const mm = gsap.matchMedia()
+      mm.add("(min-width: 768px)", () => {
+        const cards = gsap.utils.toArray('.protocol-card')
+        cards.forEach((card, index) => {
+          // If there's a next card, shrink and fade this card when the next one stacks over it
+          if (index < cards.length - 1) {
+            gsap.to(card, {
+              scale: 0.92,
+              opacity: 0.6,
+              filter: 'blur(4px)',
+              scrollTrigger: {
+                trigger: cards[index + 1],
+                start: 'top 80%',
+                end: 'top 50%',
+                scrub: true,
+              }
+            })
+          }
+        })
       })
     }, containerRef)
 
@@ -35,42 +38,42 @@ function Protocol() {
     <section
       ref={containerRef}
       id="process"
-      className="py-24 px-6 max-w-5xl mx-auto w-full flex flex-col gap-12 text-left"
+      className="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full flex flex-col gap-10 sm:gap-12 text-left"
     >
-      <div className="flex flex-col gap-4 mb-8">
+      <div className="flex flex-col gap-4 mb-4 sm:mb-8">
         <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">OPERATIONAL METHODOLOGY</span>
-        <h2 className="font-sans text-4xl sm:text-5xl uppercase tracking-tighter">
+        <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter">
           THE ROADMAP TO AUTONOMY
         </h2>
-        <p className="font-sans text-charcoal/60 text-lg max-w-xl">
+        <p className="font-sans text-charcoal/60 text-base sm:text-lg max-w-xl">
           The goal isn't to automate your tasks, it's to transform your processes. Implemented in phases to eliminate risk, maintain complete business continuity, and ensure positive return on investment. Turning business ideas into architected software solutions.
         </p>
       </div>
 
       {/* Sticky Stacking Grid */}
-      <div className="relative flex flex-col gap-24">
+      <div className="relative flex flex-col gap-8 md:gap-20">
 
         {/* Card 1: Stage 01 Audit */}
-        <div className="protocol-card sticky top-28 w-full p-8 bg-offwhite brutalist-border rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-8 h-auto md:h-[400px]">
-          <div className="flex-1 flex flex-col justify-between h-full py-4 text-left">
+        <div className="protocol-card relative md:sticky md:top-28 w-full p-6 sm:p-8 md:p-10 bg-offwhite brutalist-border rounded-3xl sm:rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 h-auto md:h-[400px]">
+          <div className="flex-1 flex flex-col justify-between h-full py-2 sm:py-4 text-left">
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">STAGE 01</span>
-              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-4">
+              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-3 sm:mb-4">
                 The AI Opportunity Audit
               </h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
                 We embed with multiple team members side-by-side to observe their operations & map their workflows. The more precise the audit, the more precise the solution, allowing us to isolate structural anomalies, capture undocumented knowledge, and design high-ROI system integration plans.
               </p>
             </div>
-            <div className="font-mono text-[11px] text-charcoal/40 mt-6 md:mt-0 uppercase">
+            <div className="font-mono text-[11px] text-charcoal/40 mt-4 md:mt-0 uppercase">
               // Deliverable: Opportunity Map & Bottleneck Report
             </div>
           </div>
 
           {/* SVG Animation: Rotating Brutalist Gear */}
-          <div className="w-48 h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
+          <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
             <svg
-              className="w-32 h-32 text-signal animate-[spin_12s_linear_infinite]"
+              className="w-24 h-24 sm:w-32 sm:h-32 text-signal animate-[spin_12s_linear_infinite]"
               viewBox="0 0 100 100"
               fill="none"
               stroke="currentColor"
@@ -92,24 +95,24 @@ function Protocol() {
         </div>
 
         {/* Card 2: Stage 02 Design & Architecture */}
-        <div className="protocol-card sticky top-28 w-full p-8 bg-offwhite brutalist-border rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-8 h-auto md:h-[400px]">
-          <div className="flex-1 flex flex-col justify-between h-full py-4 text-left">
+        <div className="protocol-card relative md:sticky md:top-28 w-full p-6 sm:p-8 md:p-10 bg-offwhite brutalist-border rounded-3xl sm:rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 h-auto md:h-[400px]">
+          <div className="flex-1 flex flex-col justify-between h-full py-2 sm:py-4 text-left">
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">STAGE 02</span>
-              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-4">
+              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-3 sm:mb-4">
                 Architecture & System Build
               </h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
                 We design and program a lightweight, model-agnostic operating layer. We interface directly with your database and physical schedule trackers. Zero switching cost, zero legacy system migration.
               </p>
             </div>
-            <div className="font-mono text-[11px] text-charcoal/40 mt-6 md:mt-0 uppercase">
+            <div className="font-mono text-[11px] text-charcoal/40 mt-4 md:mt-0 uppercase">
               // Deliverable: Sandbox Environment & Custom Agents
             </div>
           </div>
 
           {/* SVG Animation: Scanning Laser Grid */}
-          <div className="w-48 h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
+          <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
             {/* Grid background */}
             <div className="absolute inset-0 brutalist-grid opacity-30" />
 
@@ -118,7 +121,7 @@ function Protocol() {
 
             {/* Central Node Illustration */}
             <svg
-              className="w-24 h-24 text-charcoal z-10"
+              className="w-20 h-20 sm:w-24 sm:h-24 text-charcoal z-10"
               viewBox="0 0 100 100"
               fill="none"
               stroke="currentColor"
@@ -147,26 +150,26 @@ function Protocol() {
         </div>
 
         {/* Card 3: Stage 03 Live Deploy */}
-        <div className="protocol-card sticky top-28 w-full p-8 bg-offwhite brutalist-border rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-8 h-auto md:h-[400px]">
-          <div className="flex-1 flex flex-col justify-between h-full py-4 text-left">
+        <div className="protocol-card relative md:sticky md:top-28 w-full p-6 sm:p-8 md:p-10 bg-offwhite brutalist-border rounded-3xl sm:rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 h-auto md:h-[400px]">
+          <div className="flex-1 flex flex-col justify-between h-full py-2 sm:py-4 text-left">
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">STAGE 03</span>
-              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-4">
+              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-3 sm:mb-4">
                 Deployment & Autonomous Scale
               </h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
                 We launch custom agents into your enterprise, building on top of your existing software. We log exceptions in real-time, scale up pipeline throughput, and optimize agent triggers.
               </p>
             </div>
-            <div className="font-mono text-[11px] text-charcoal/40 mt-6 md:mt-0 uppercase">
+            <div className="font-mono text-[11px] text-charcoal/40 mt-4 md:mt-0 uppercase">
               // Deliverable: Production Operations Dashboard & Retainer
             </div>
           </div>
 
           {/* SVG Animation: EKG Waveform */}
-          <div className="w-48 h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
+          <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
             <svg
-              className="w-40 h-24 text-signal"
+              className="w-32 h-20 sm:w-40 sm:h-24 text-signal"
               viewBox="0 0 100 40"
               fill="none"
               stroke="currentColor"

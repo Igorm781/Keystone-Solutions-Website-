@@ -10,7 +10,7 @@ function CaseStudy() {
       {/* Shared Nav */}
       <Navbar />
 
-      <main className="w-full max-w-5xl mx-auto px-6 sm:px-12 md:px-24 pt-36 pb-24 flex-grow text-left">
+      <main className="w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-36 pb-16 sm:pb-24 flex-grow text-left">
         
         {/* Back Link */}
         <Link

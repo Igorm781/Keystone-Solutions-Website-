@@ -48,7 +48,7 @@ function Navbar() {
     <header className="w-full">
       {/* Navbar Container */}
       <nav
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl px-6 py-3 rounded-full border transition-all duration-300 ${
+        className={`fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] sm:w-[92%] max-w-5xl px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border transition-all duration-300 ${
           isScrolled || isSubPage
             ? 'bg-offwhite/90 backdrop-blur-md border-charcoal shadow-brutalist text-charcoal'
             : 'bg-transparent border-white/20 text-offwhite'

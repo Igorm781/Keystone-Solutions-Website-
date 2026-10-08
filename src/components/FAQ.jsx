@@ -36,25 +36,25 @@ function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-24 px-6 max-w-4xl mx-auto w-full text-left">
-      <div className="flex flex-col gap-4 mb-16 text-center md:text-left">
+    <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full text-left">
+      <div className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-16 text-left">
         <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">REASSURANCE PROTOCOLS</span>
-        <h2 className="font-sans text-4xl sm:text-5xl uppercase tracking-tighter">
+        <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter">
           FREQUENTLY RAISED OBJECTIONS
         </h2>
-        <p className="font-sans text-charcoal/60 text-lg max-w-xl">
+        <p className="font-sans text-charcoal/60 text-base sm:text-lg max-w-xl">
           We answer our clients' questions honestly. No hidden software fees, no vendor lock-in.
         </p>
       </div>
 
       {/* Accordion List */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3 sm:gap-4">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index
           return (
             <div
               key={index}
-              className="brutalist-card p-0 overflow-hidden bg-offwhite transition-all duration-300"
+              className="brutalist-card rounded-2xl p-0 overflow-hidden bg-offwhite transition-all duration-300"
             >
               {/* Question Clickable Area */}
               <button
