@@ -22,23 +22,17 @@ function Navbar() {
   }, [])
 
   const handleNavClick = (e, targetId) => {
-    e.preventDefault()
     setIsMobileMenuOpen(false)
-    
-    if (location.pathname !== '/') {
-      navigate('/')
-      // Delay slightly to allow navigation to complete before scrolling
-      setTimeout(() => {
-        const element = document.getElementById(targetId)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
-      }, 100)
-    } else {
+    if (location.pathname === '/') {
+      e.preventDefault()
       const element = document.getElementById(targetId)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
+        window.history.pushState(null, '', `/#${targetId}`)
       }
+    } else {
+      e.preventDefault()
+      navigate(`/#${targetId}`)
     }
   }
 
@@ -90,7 +84,7 @@ function Navbar() {
           {/* Desktop Nav Items */}
           <div className="hidden md:flex items-center gap-8 font-mono text-sm font-bold uppercase">
             <a
-              href="#process"
+              href="/#process"
               onClick={(e) => handleNavClick(e, 'process')}
               className="hover:text-signal transition-colors duration-200 py-1"
             >
@@ -105,7 +99,7 @@ function Navbar() {
               Case Study
             </Link>
             <a
-              href="#faq"
+              href="/#faq"
               onClick={(e) => handleNavClick(e, 'faq')}
               className="hover:text-signal transition-colors duration-200 py-1"
             >
@@ -116,7 +110,7 @@ function Navbar() {
           {/* Action CTA Button */}
           <div className="hidden md:block">
             <a
-              href="#book"
+              href="/#book"
               onClick={(e) => handleNavClick(e, 'book')}
               className={`inline-flex items-center gap-1.5 px-5 py-2 rounded-full border font-mono text-xs font-bold uppercase transition-all duration-300 scale-100 hover:scale-103 ${
                 isScrolled || isSubPage
@@ -148,7 +142,7 @@ function Navbar() {
         <div className="fixed inset-0 z-40 bg-charcoal/90 backdrop-blur-sm md:hidden flex flex-col justify-center items-center">
           <div className="flex flex-col gap-6 text-center font-sans text-2xl font-bold uppercase tracking-wide">
             <a
-              href="#process"
+              href="/#process"
               onClick={(e) => handleNavClick(e, 'process')}
               className="text-offwhite hover:text-signal transition-colors"
             >
@@ -162,14 +156,14 @@ function Navbar() {
               Case Study
             </Link>
             <a
-              href="#faq"
+              href="/#faq"
               onClick={(e) => handleNavClick(e, 'faq')}
               className="text-offwhite hover:text-signal transition-colors"
             >
               FAQ
             </a>
             <a
-              href="#book"
+              href="/#book"
               onClick={(e) => handleNavClick(e, 'book')}
               className="mt-4 px-8 py-3 bg-signal text-offwhite border border-offwhite font-mono text-sm font-bold uppercase hover:bg-offwhite hover:text-charcoal transition-all"
             >

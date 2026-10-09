@@ -1,13 +1,11 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, ShieldCheck, Lock, EyeOff, Database, Mail } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useSeo } from '../seo/useSeo'
 
 function PrivacyPolicy() {
-  useEffect(() => {
-    document.title = 'Privacy Policy — Keystone Solution'
-  }, [])
+  useSeo('/privacy')
   return (
     <div className="min-h-screen bg-offwhite text-charcoal relative flex flex-col items-center">
       <Navbar />

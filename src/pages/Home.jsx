@@ -9,8 +9,10 @@ import Protocol from '../components/Protocol'
 import FAQ from '../components/FAQ'
 import Booking from '../components/Booking'
 import Footer from '../components/Footer'
+import { useSeo } from '../seo/useSeo'
 
 function Home() {
+  useSeo('/')
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -21,12 +23,14 @@ function Home() {
       navigate('/terms', { replace: true })
     } else if (location.hash) {
       const id = location.hash.replace('#', '')
-      const el = document.getElementById(id)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      })
     }
-  }, [location, navigate])
+  }, [location.hash, navigate])
   return (
     <div className="min-h-screen bg-offwhite text-charcoal relative flex flex-col items-center">
       {/* Top Navbar */}

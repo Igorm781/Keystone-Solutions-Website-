@@ -1,4 +1,17 @@
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-of-service"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.keystonesolution.co/*"
+  to = "https://keystonesolution.co/:splat"
+  status = 301
+  force = true

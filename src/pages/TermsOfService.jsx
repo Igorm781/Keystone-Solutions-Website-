@@ -1,13 +1,11 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Scale, Shield, FileCode, Mail } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useSeo } from '../seo/useSeo'
 
 function TermsOfService() {
-  useEffect(() => {
-    document.title = 'Terms of Service — Keystone Solution'
-  }, [])
+  useSeo('/terms')
   return (
     <div className="min-h-screen bg-offwhite text-charcoal relative flex flex-col items-center">
       <Navbar />

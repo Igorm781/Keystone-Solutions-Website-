@@ -3,8 +3,10 @@ import { ArrowLeft, Clock, DollarSign, Database, AlertTriangle } from 'lucide-re
 import { caseStudy } from '../data/caseStudyData'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useSeo } from '../seo/useSeo'
 
 function CaseStudy() {
+  useSeo('/case-study')
   return (
     <div className="min-h-screen bg-offwhite text-charcoal relative flex flex-col items-center">
       {/* Shared Nav */}
@@ -310,12 +312,7 @@ function CaseStudy() {
               We audit operations, architecture bespoke agents, and synchronize legacy physical systems. Zero software lock-in, full code ownership.
             </p>
             <Link
-              to="/"
-              onClick={() => {
-                setTimeout(() => {
-                  document.getElementById('book')?.scrollIntoView({ behavior: 'smooth' })
-                }, 100)
-              }}
+              to="/#book"
               className="brutalist-button py-3 px-8 text-xs font-mono tracking-wider"
             >
               SCHEDULE AN AUDIT

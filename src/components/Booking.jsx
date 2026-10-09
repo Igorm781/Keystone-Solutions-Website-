@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Calendar, PhoneCall, ArrowRight } from 'lucide-react'
 
 function Booking() {

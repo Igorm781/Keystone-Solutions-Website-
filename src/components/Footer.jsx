@@ -11,20 +11,16 @@ function Footer() {
   }
 
   const handleNavClick = (e, targetId) => {
-    e.preventDefault()
-    if (location.pathname !== '/') {
-      navigate('/')
-      setTimeout(() => {
-        const element = document.getElementById(targetId)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
-      }, 100)
-    } else {
+    if (location.pathname === '/') {
+      e.preventDefault()
       const element = document.getElementById(targetId)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
+        window.history.pushState(null, '', `/#${targetId}`)
       }
+    } else {
+      e.preventDefault()
+      navigate(`/#${targetId}`)
     }
   }
 
@@ -79,9 +75,9 @@ function Footer() {
             <div className="grid grid-cols-2 gap-2 font-mono text-sm">
               <Link to="/" onClick={handleScrollToTop} className="hover:text-signal transition-colors">Home</Link>
               <Link to="/case-study" className="hover:text-signal transition-colors">Case Study</Link>
-              <a href="#process" onClick={(e) => handleNavClick(e, 'process')} className="hover:text-signal transition-colors">Process</a>
-              <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="hover:text-signal transition-colors">FAQ</a>
-              <a href="#book" onClick={(e) => handleNavClick(e, 'book')} className="hover:text-signal transition-colors">Book a Call</a>
+              <a href="/#process" onClick={(e) => handleNavClick(e, 'process')} className="hover:text-signal transition-colors">Process</a>
+              <a href="/#faq" onClick={(e) => handleNavClick(e, 'faq')} className="hover:text-signal transition-colors">FAQ</a>
+              <a href="/#book" onClick={(e) => handleNavClick(e, 'book')} className="hover:text-signal transition-colors">Book a Call</a>
             </div>
           </div>
           
