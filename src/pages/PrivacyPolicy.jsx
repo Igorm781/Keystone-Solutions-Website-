@@ -204,7 +204,7 @@ function PrivacyPolicy() {
             <div className="p-6 bg-offwhite brutalist-border rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-2">
               <div>
                 <span className="font-mono text-xs font-bold uppercase text-charcoal block">Keystone Solution</span>
-                <span className="font-sans text-sm text-charcoal/70">Process Architecture & Forward Deployed Engineering</span>
+                <span className="font-sans text-sm text-charcoal/70">AI Integration & Architecture for Manufacturers</span>
               </div>
               <a
                 href="mailto:Architect@Keystonesolution.co"

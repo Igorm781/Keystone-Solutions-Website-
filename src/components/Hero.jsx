@@ -70,7 +70,7 @@ function Hero() {
             ref={title2Ref}
             className="block font-serif italic text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[8rem] text-signal mt-1 sm:mt-3 pl-1 sm:pl-3 leading-[0.95]"
           >
-            Industrial Process.
+            Manufacturing Process.
           </span>
         </h1>
 

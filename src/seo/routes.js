@@ -4,7 +4,7 @@ export const routes = [
   {
     path: '/',
     file: 'index.html',
-    title: 'Keystone Solution | Industrial Automation & Process Architecture',
+    title: 'Keystone Solution | AI Integration & Architecture for Manufacturers',
     description: 'Custom AI-agent systems that automate manufacturing operations end-to-end. Built on your legacy physical and digital stack. Zero migrations, full code ownership.',
     ogType: 'website',
     jsonLd: [
@@ -20,7 +20,7 @@ export const routes = [
         description: 'Custom AI-agent systems that automate manufacturing operations end-to-end. Built on your legacy physical and digital stack. Zero migrations, full code ownership.',
         areaServed: 'US',
         knowsAbout: [
-          'Industrial Automation',
+          'AI Integration & Architecture',
           'AI Agents',
           'Manufacturing Operations',
           'Maintenance and ERP Integration',
@@ -68,14 +68,14 @@ export const routes = [
     path: '/privacy',
     file: 'privacy.html',
     title: 'Privacy Policy | Keystone Solution',
-    description: 'Privacy policy and data protection protocol for Keystone Solution industrial automation and process architecture services.',
+    description: 'Privacy policy and data protection protocol for Keystone Solution AI integration and architecture services for manufacturers.',
     ogType: 'website'
   },
   {
     path: '/terms',
     file: 'terms.html',
     title: 'Terms of Service | Keystone Solution',
-    description: 'Terms of service and operational engagement protocol for Keystone Solution industrial automation and process architecture services.',
+    description: 'Terms of service and operational engagement protocol for Keystone Solution AI integration and architecture services for manufacturers.',
     ogType: 'website'
   },
   {

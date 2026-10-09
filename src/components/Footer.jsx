@@ -65,7 +65,7 @@ function Footer() {
               KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SOLUTION</span>
             </Link>
             <p className="font-sans text-sm text-offwhite/60 max-w-sm leading-relaxed">
-              Process architect and forward-deployed engineering for production manufacturers. We build custom agentic systems that run operations end-to-end.
+              AI integration & architecture for production manufacturers. We build custom agentic systems that run operations end-to-end.
             </p>
           </div>
           
@@ -106,7 +106,7 @@ function Footer() {
             </div>
             
             <p className="font-mono text-xs text-offwhite/50">
-              Forward Deployed Process Architecture<br />
+              AI Integration & Architecture for Manufacturers<br />
               Zero migrations • Full code ownership
             </p>
           </div>

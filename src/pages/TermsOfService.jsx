@@ -81,7 +81,7 @@ function TermsOfService() {
               <span className="font-mono text-sm text-signal font-bold">02.</span> Scope of Services & Engagements
             </h2>
             <p className="font-sans text-sm sm:text-base text-charcoal/80 leading-relaxed">
-              Keystone Solution provides process architecture advisory, operational opportunity audits, and custom forward-deployed engineering of autonomous agent workflows for manufacturing and industrial enterprises.
+              Keystone Solution provides AI integration and architecture advisory, operational opportunity audits, and custom forward-deployed engineering of autonomous agent workflows for manufacturing enterprises.
             </p>
             <div className="p-4 bg-paper/30 brutalist-border rounded-xl font-mono text-xs text-charcoal/80 leading-relaxed">
               <strong>Please Note:</strong> Initial discovery calls, schedule bookings, and website case studies provide general technical context and feasibility analysis. Binding commitments, detailed deliverables, timeline guarantees, and financial consideration are formalized exclusively through mutually executed Master Services Agreements (MSAs) or Statements of Work (SOWs).
@@ -163,7 +163,7 @@ function TermsOfService() {
             <div className="p-6 bg-offwhite brutalist-border rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-2">
               <div>
                 <span className="font-mono text-xs font-bold uppercase text-charcoal block">Keystone Solution — Legal & Architecture</span>
-                <span className="font-sans text-sm text-charcoal/70">Forward Deployed Process Architecture</span>
+                <span className="font-sans text-sm text-charcoal/70">Forward Deployed AI Integration & Architecture</span>
               </div>
               <a
                 href="mailto:Architect@Keystonesolution.co"
