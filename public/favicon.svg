@@ -1,18 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
   <style>
     .arch { fill: #111111; }
-    .keystone { fill: #E63B2E; }
     @media (prefers-color-scheme: dark) {
       .arch { fill: #F5F3EE; }
     }
   </style>
-  <g transform="translate(55, 71.25) scale(16.25)">
-    <path class="arch" d="M 2 12 L 4.5 12 L 4.5 19 L 2 19 Z" />
-    <path class="arch" d="M 3.2 7.7 L 5.6 5 L 7 9.5 L 5 11.5 Z" />
-    <path class="arch" d="M 6 4.5 L 9.5 3.3 L 10.3 8.3 L 7.3 9 Z" />
-    <path class="arch" d="M 19.5 12 L 22 12 L 22 19 L 19.5 19 Z" />
-    <path class="arch" d="M 18.4 5 L 20.8 7.7 L 19 11.5 L 17 9.5 Z" />
-    <path class="arch" d="M 14.5 3.3 L 18 4.5 L 16.7 9 L 13.7 8.3 Z" />
-    <path class="keystone" d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" />
-  </g>
+  <!-- Top Bar -->
+  <path class="arch" d="M 206 65 L 294 65 L 294 77 L 206 77 Z" />
+  <!-- Keystone (Central block) -->
+  <path class="arch" d="M 216.0 104.9 L 284.0 104.9 L 269.8 176.5 L 230.2 176.5 Z" />
+  <!-- Left Voussoir 1 -->
+  <path class="arch" d="M 195.7 129.6 L 213.0 200.0 L 177.2 216.0 L 134.0 158.0 Z" />
+  <!-- Right Voussoir 1 -->
+  <path class="arch" d="M 304.3 129.6 L 366.0 158.0 L 322.8 216.0 L 287.0 200.0 Z" />
+  <!-- Left Voussoir 2 -->
+  <path class="arch" d="M 119.1 172.8 L 163.6 228.4 L 138.9 258.0 L 74.7 225.9 Z" />
+  <!-- Right Voussoir 2 -->
+  <path class="arch" d="M 380.9 172.8 L 425.3 225.9 L 361.1 258.0 L 336.4 228.4 Z" />
+  <!-- Left Voussoir 3 -->
+  <path class="arch" d="M 66.0 244.4 L 131.5 275.3 L 122.8 312.3 L 50.0 311.1 Z" />
+  <!-- Right Voussoir 3 -->
+  <path class="arch" d="M 434.0 244.4 L 450.0 311.1 L 377.2 312.3 L 368.5 275.3 Z" />
+  <!-- Left Pillar -->
+  <path class="arch" d="M 54.9 338.3 L 119.1 338.3 L 119.1 429.6 L 54.9 429.6 Z" />
+  <!-- Right Pillar -->
+  <path class="arch" d="M 380.9 338.3 L 445.1 338.3 L 445.1 429.6 L 380.9 429.6 Z" />
 </svg>

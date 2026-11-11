@@ -61,22 +61,27 @@ function Navbar() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Left Pillar */}
-              <path d="M 2 12 L 4.5 12 L 4.5 19 L 2 19 Z" fill="currentColor" />
-              {/* Left Voussoir 2 */}
-              <path d="M 3.2 7.7 L 5.6 5 L 7 9.5 L 5 11.5 Z" fill="currentColor" />
-              {/* Left Voussoir 1 */}
-              <path d="M 6 4.5 L 9.5 3.3 L 10.3 8.3 L 7.3 9 Z" fill="currentColor" />
-              
-              {/* Right Pillar */}
-              <path d="M 19.5 12 L 22 12 L 22 19 L 19.5 19 Z" fill="currentColor" />
-              {/* Right Voussoir 2 */}
-              <path d="M 18.4 5 L 20.8 7.7 L 19 11.5 L 17 9.5 Z" fill="currentColor" />
-              {/* Right Voussoir 1 */}
-              <path d="M 14.5 3.3 L 18 4.5 L 16.7 9 L 13.7 8.3 Z" fill="currentColor" />
-              
+              {/* Top Bar */}
+              <path d="M 9.9 2.8 L 14.1 2.8 L 14.1 3.5 L 9.9 3.5 Z" fill="currentColor" />
               {/* Keystone (Central block) */}
-              <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#E63B2E" />
+              <path d="M 10.3 4.75 L 13.7 4.75 L 12.99 8.33 L 11.01 8.33 Z" fill="currentColor" />
+              {/* Left Voussoir 1 */}
+              <path d="M 9.28 5.98 L 10.15 9.5 L 8.36 10.3 L 6.2 7.4 Z" fill="currentColor" />
+              {/* Left Voussoir 2 */}
+              <path d="M 5.46 8.14 L 7.68 10.92 L 6.44 12.4 L 3.23 10.8 Z" fill="currentColor" />
+              {/* Left Voussoir 3 */}
+              <path d="M 2.8 11.72 L 6.07 13.27 L 5.64 15.12 L 2.0 15.06 Z" fill="currentColor" />
+              {/* Left Pillar */}
+              <path d="M 2.25 16.41 L 5.46 16.41 L 5.46 20.98 L 2.25 20.98 Z" fill="currentColor" />
+              
+              {/* Right Voussoir 1 */}
+              <path d="M 14.72 5.98 L 17.8 7.4 L 15.64 10.3 L 13.85 9.5 Z" fill="currentColor" />
+              {/* Right Voussoir 2 */}
+              <path d="M 18.54 8.14 L 20.77 10.8 L 17.56 12.4 L 16.32 10.92 Z" fill="currentColor" />
+              {/* Right Voussoir 3 */}
+              <path d="M 21.2 11.72 L 22.0 15.06 L 18.36 15.12 L 17.93 13.27 Z" fill="currentColor" />
+              {/* Right Pillar */}
+              <path d="M 18.54 16.41 L 21.75 16.41 L 21.75 20.98 L 18.54 20.98 Z" fill="currentColor" />
             </svg>
             KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SOLUTION</span>
           </Link>
