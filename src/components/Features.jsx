@@ -1,12 +1,24 @@
 import { useState, useEffect } from 'react'
 import { Terminal, Zap, TrendingUp } from 'lucide-react'
 
+// Telemetry Typewriter Log Pool (file-scoped to prevent re-creation & lint warning)
+const logPool = [
+  "[ERP] Pulling open work orders...",
+  "[AGENT] Mapping mechanic hours to Asset #A-112...",
+  "[HITL] 2 discrepancies queued for approval",
+  "[PM] Press Line 3 lubrication schedule verified",
+  "[INVENTORY] Bearing 6205 reorder threshold reached",
+  "[AGENT] Work order #WO-4471 reconciled to ledger",
+  "[MAINT] Shift handover summary generated",
+  "[SYSTEM] Telemetry accuracy threshold: 99.8% verified"
+]
+
 function Features() {
   // --- 1. Diagnostic Shuffler State ---
   const [shuffleItems, setShuffleItems] = useState([
-    { id: 1, type: "MANUAL APPROVAL", val: "Invoice #9084 match threshold", action: "Bypassed & Auto-Approved", status: "RESOLVED" },
-    { id: 2, type: "DATA ENTRY", val: "Syncing BoL-890 to SAP ERP ledger", action: "Auto-ingested via OCR agent", status: "RESOLVED" },
-    { id: 3, type: "COORDINATION", val: "Carrier port dispatch exception", action: "Re-routed via Slack workflow", status: "RESOLVED" }
+    { id: 1, type: "PM OVERDUE", val: "Press Line 3 lube PM", action: "Escalated to maintenance lead", status: "RESOLVED" },
+    { id: 2, type: "LABOR ENTRY", val: "WO-4471 hours unmapped", action: "Auto-mapped to asset, pending approval", status: "RESOLVED" },
+    { id: 3, type: "SPARE PARTS", val: "Bearing 6205 below min", action: "Reorder flagged, 3-wk lead time", status: "RESOLVED" }
   ])
 
   useEffect(() => {
@@ -22,17 +34,6 @@ function Features() {
   }, [])
 
   // --- 2. Telemetry Typewriter State ---
-  const logPool = [
-    "[AUDIT] Scanning material ledger system...",
-    "[ERP] Connecting to legacy SAP databases...",
-    "[AUDIT] Surfaced 12 recurring invoice exception paths.",
-    "[AGENT] Matching BoL-890 against PO-3442...",
-    "[AGENT] Match complete. Delta 0.00%. Auto-cleared.",
-    "[3PL] Syncing dispatch manifest with carrier DHL.",
-    "[SLACK] Exception alert pushed to operations team.",
-    "[SYSTEM] Optimization threshold: 97.4% accuracy reached."
-  ]
-
   const [logs, setLogs] = useState([])
   const [currentText, setCurrentText] = useState("")
   const [logIndex, setLogIndex] = useState(0)
@@ -129,7 +130,7 @@ function Features() {
                     transform: `translateY(${translateY}px) scale(${scale})`,
                     opacity,
                   }}
-                  className="absolute w-[94%] max-w-[270px] p-3.5 sm:p-4 bg-offwhite brutalist-border shadow-brutalist rounded-2xl transition-all duration-500 ease-in-out flex flex-col justify-between h-34 sm:h-36"
+                  className="absolute w-[94%] max-w-[270px] p-3.5 sm:p-4 bg-offwhite brutalist-border shadow-brutalist rounded-2xl transition-all duration-500 ease-in-out flex flex-col justify-between h-36"
                 >
                   <div className="flex justify-between items-start">
                     <span className="font-mono text-[9px] bg-charcoal text-offwhite px-2 py-0.5 rounded font-bold">
@@ -218,8 +219,8 @@ function Features() {
               {/* Track 1 */}
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between text-[9px] font-mono text-charcoal/60">
-                  <span>PIPELINE_ALPHA (Intake)</span>
-                  <span className="text-charcoal font-bold">980 jobs/hr</span>
+                  <span>Work Orders (Intake)</span>
+                  <span className="text-charcoal font-bold">48 jobs/day</span>
                 </div>
                 <div className="h-2 w-full bg-charcoal/5 border border-charcoal/10 rounded-full overflow-hidden">
                   <div className="h-full bg-signal w-4/5 animate-[scale-bar-1_4s_ease-in-out_infinite]" />
@@ -229,8 +230,8 @@ function Features() {
               {/* Track 2 */}
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between text-[9px] font-mono text-charcoal/60">
-                  <span>PIPELINE_BETA (Routing)</span>
-                  <span className="text-charcoal font-bold">1,420 jobs/hr</span>
+                  <span>PM Schedules (Tracking)</span>
+                  <span className="text-charcoal font-bold">120 tasks/day</span>
                 </div>
                 <div className="h-2 w-full bg-charcoal/5 border border-charcoal/10 rounded-full overflow-hidden">
                   <div className="h-full bg-signal w-[90%] animate-[scale-bar-2_5s_ease-in-out_infinite]" />
@@ -240,8 +241,8 @@ function Features() {
               {/* Track 3 */}
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between text-[9px] font-mono text-charcoal/60">
-                  <span>PIPELINE_GAMMA (Logistics)</span>
-                  <span className="text-charcoal font-bold">2,100 jobs/hr</span>
+                  <span>Parts Journal (Reconciliation)</span>
+                  <span className="text-charcoal font-bold">85 items/day</span>
                 </div>
                 <div className="h-2 w-full bg-charcoal/5 border border-charcoal/10 rounded-full overflow-hidden">
                   <div className="h-full bg-signal w-[75%] animate-[scale-bar-3_3s_ease-in-out_infinite]" />

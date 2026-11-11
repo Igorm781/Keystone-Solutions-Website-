@@ -81,7 +81,7 @@ function Booking() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-left">
                 <div className="flex items-center gap-2 border-b border-charcoal/10 pb-3 mb-2">
                   <Calendar className="w-5 h-5 text-signal" />
-                  <h3 className="font-mono text-xs uppercase tracking-wider font-bold">Schedule Operational Review</h3>
+                  <h3 className="font-mono text-xs uppercase tracking-wider font-bold">Schedule a Discovery Call</h3>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
@@ -171,9 +171,9 @@ function Booking() {
                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center border-2 border-emerald-500 text-emerald-600 shadow-brutalist">
                   <PhoneCall className="w-8 h-8" />
                 </div>
-                <h3 className="font-sans text-xl font-bold uppercase tracking-tight">Audit Requested</h3>
+                <h3 className="font-sans text-xl font-bold uppercase tracking-tight">Call Requested</h3>
                 <p className="font-sans text-sm text-charcoal/60 max-w-xs">
-                  Thank you, {formData.name}. We will contact you within 2 business hours at <span className="font-mono text-xs font-bold text-charcoal">{formData.email}</span> to confirm your scheduling time. You can also reach our team directly at <a href="mailto:Architect@Keystonesolution.co" className="text-signal font-mono font-bold hover:underline">Architect@Keystonesolution.co</a>.
+                  Thank you, {formData.name}. We will contact you within 1 business day at <span className="font-mono text-xs font-bold text-charcoal">{formData.email}</span> to confirm your scheduling time. You can also reach our team directly at <a href="mailto:Architect@Keystonesolution.co" className="text-signal font-mono font-bold hover:underline">Architect@Keystonesolution.co</a>.
                 </p>
                 <button
                   onClick={() => {

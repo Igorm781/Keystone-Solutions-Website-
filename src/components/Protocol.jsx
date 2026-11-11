@@ -48,7 +48,7 @@ function Protocol() {
           THE ROADMAP TO AUTONOMY
         </h2>
         <p className="font-sans text-charcoal/60 text-base sm:text-lg max-w-xl">
-          The goal isn't to automate your tasks, it's to transform your processes. Implemented in phases to eliminate risk, maintain complete business continuity, and ensure positive return on investment. Turning business ideas into architected software solutions.
+          The goal isn't to automate your tasks—it's to transform your processes. Implemented in phases to eliminate risk, maintain complete business continuity, and ensure positive return on investment. Turning business ideas into architected software solutions.
         </p>
       </div>
 
@@ -72,54 +72,13 @@ function Protocol() {
             </div>
           </div>
 
-          {/* SVG Animation: Rotating Brutalist Gear */}
-          <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
-            <svg
-              className="w-24 h-24 sm:w-32 sm:h-32 text-signal animate-[spin_12s_linear_infinite]"
-              viewBox="0 0 100 100"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              {/* Outer Gear Ring */}
-              <circle cx="50" cy="50" r="30" strokeDasharray="6 4" />
-              {/* Inner Gear Ring */}
-              <circle cx="50" cy="50" r="20" />
-              {/* Center Connection */}
-              <circle cx="50" cy="50" r="5" fill="currentColor" />
-              {/* Gear Teeth Lines */}
-              <line x1="50" y1="10" x2="50" y2="90" strokeWidth="3" />
-              <line x1="10" y1="50" x2="90" y2="50" strokeWidth="3" />
-              <line x1="22" y1="22" x2="78" y2="78" strokeWidth="3" />
-              <line x1="22" y1="78" x2="78" y2="22" strokeWidth="3" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 2: Stage 02 Design & Architecture */}
-        <div className="protocol-card relative md:sticky md:top-28 w-full p-6 sm:p-8 md:p-10 bg-offwhite brutalist-border rounded-3xl sm:rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 h-auto md:h-[400px]">
-          <div className="flex-1 flex flex-col justify-between h-full py-2 sm:py-4 text-left">
-            <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">STAGE 02</span>
-              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-3 sm:mb-4">
-                Architecture & System Build
-              </h3>
-              <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
-                We design and program a lightweight, model-agnostic operating layer. We interface directly with your database and physical schedule trackers. Zero switching cost, zero legacy system migration.
-              </p>
-            </div>
-            <div className="font-mono text-[11px] text-charcoal/40 mt-4 md:mt-0 uppercase">
-              // Deliverable: Sandbox Environment & Custom Agents
-            </div>
-          </div>
-
           {/* SVG Animation: Scanning Laser Grid */}
           <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
             {/* Grid background */}
             <div className="absolute inset-0 brutalist-grid opacity-30" />
 
-            {/* Red Laser Line */}
-            <div className="absolute left-0 w-full h-[3px] bg-signal/80 shadow-[0_0_8px_#E63B2E] animate-[scan-line_3s_ease-in-out_infinite]" />
+            {/* Laser Line */}
+            <div className="absolute left-0 w-full h-[3px] bg-signal/80 shadow-[0_0_8px_#242B32] animate-[scan-line_3s_ease-in-out_infinite]" />
 
             {/* Central Node Illustration */}
             <svg
@@ -148,6 +107,47 @@ function Protocol() {
                 100% { top: 10%; }
               }
             `}</style>
+          </div>
+        </div>
+
+        {/* Card 2: Stage 02 Design & Architecture */}
+        <div className="protocol-card relative md:sticky md:top-28 w-full p-6 sm:p-8 md:p-10 bg-offwhite brutalist-border rounded-3xl sm:rounded-[2.5rem] shadow-brutalist flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 h-auto md:h-[400px]">
+          <div className="flex-1 flex flex-col justify-between h-full py-2 sm:py-4 text-left">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">STAGE 02</span>
+              <h3 className="font-sans text-2xl sm:text-3xl uppercase tracking-tight mt-1 mb-3 sm:mb-4">
+                Architecture & System Build
+              </h3>
+              <p className="font-sans text-sm text-charcoal/70 leading-relaxed max-w-md">
+                We design and program a lightweight, model-agnostic operating layer. We interface directly with your database and physical schedule trackers. Zero switching cost, zero legacy system migration.
+              </p>
+            </div>
+            <div className="font-mono text-[11px] text-charcoal/40 mt-4 md:mt-0 uppercase">
+              // Deliverable: Sandbox Environment & Custom Agents
+            </div>
+          </div>
+
+          {/* SVG Animation: Rotating Brutalist Gear */}
+          <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center bg-paper/20 rounded-2xl brutalist-border relative overflow-hidden flex-shrink-0">
+            <svg
+              className="w-24 h-24 sm:w-32 sm:h-32 text-signal animate-[spin_12s_linear_infinite]"
+              viewBox="0 0 100 100"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              {/* Outer Gear Ring */}
+              <circle cx="50" cy="50" r="30" strokeDasharray="6 4" />
+              {/* Inner Gear Ring */}
+              <circle cx="50" cy="50" r="20" />
+              {/* Center Connection */}
+              <circle cx="50" cy="50" r="5" fill="currentColor" />
+              {/* Gear Teeth Lines */}
+              <line x1="50" y1="10" x2="50" y2="90" strokeWidth="3" />
+              <line x1="10" y1="50" x2="90" y2="50" strokeWidth="3" />
+              <line x1="22" y1="22" x2="78" y2="78" strokeWidth="3" />
+              <line x1="22" y1="78" x2="78" y2="22" strokeWidth="3" />
+            </svg>
           </div>
         </div>
 

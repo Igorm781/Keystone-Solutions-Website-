@@ -38,9 +38,9 @@ function TermsOfService() {
 
         {/* Metadata sub-bar */}
         <div className="font-mono text-xs text-charcoal/60 flex flex-wrap items-center gap-x-6 gap-y-2 pb-6 mb-10 border-b border-charcoal/10 uppercase tracking-wide">
-          <span>Effective: September 2026</span>
+          <span>Effective: October 2026</span>
           <span>•</span>
-          <span>Last Updated: September 2026</span>
+          <span>Last Updated: October 2026</span>
           <span>•</span>
           <span>Scope: keystonesolution.co & Operational Engagements</span>
         </div>

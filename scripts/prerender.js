@@ -46,7 +46,7 @@ async function prerender() {
     ]
 
     if (route.noindex) {
-      headLines.push(`<meta name="robots" content="noindex">`)
+      headLines.push(`<meta name="robots" content="noindex, follow">`)
     }
 
     if (route.jsonLd && Array.isArray(route.jsonLd)) {

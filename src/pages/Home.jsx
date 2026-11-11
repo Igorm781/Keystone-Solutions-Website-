@@ -53,9 +53,9 @@ function Home() {
         {/* 5. Case Study Homepage Teaser Section */}
         <section id="proof" className="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full text-left">
           <div className="flex flex-col gap-3 sm:gap-4 mb-10 sm:mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">CASE STUDY IN-PROGRESS</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-signal font-bold">CLIENT CASE STUDY</span>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter">
-              PROOF OF CONCEPT
+              PROOF IN PRODUCTION
             </h2>
             <p className="font-sans text-charcoal/60 text-base sm:text-lg max-w-xl">
               We focus on measurable outcomes. Here is how a custom agentic operating layer optimized operations for a heavy industrial manufacturer.
@@ -92,7 +92,7 @@ function Home() {
             </div>
 
             {/* Teaser Metric Tiles */}
-            <div className="w-full md:w-[320px] flex flex-col gap-4 justify-center">
+            <div className="w-full lg:w-[320px] flex flex-col gap-4 justify-center">
               
               {/* Tile 1 */}
               <div className="p-4 bg-paper/20 rounded-2xl border border-charcoal/10 flex items-center justify-between">

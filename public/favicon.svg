@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
   <style>
     .arch { fill: #111111; }
-    .keystone { fill: #E63B2E; }
+    .keystone { fill: #242B32; }
     @media (prefers-color-scheme: dark) {
       .arch { fill: #F5F3EE; }
     }

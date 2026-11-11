@@ -15,26 +15,26 @@ export const caseStudy = {
   },
   
   challenge: {
-    description: "Our client, a mid-market heavy production industrial manufacturer, suffered from faulty tracking of labor to their assets, and also were in the need of a Maintenance Clerk. With information not being accounted for accurately, true cost of labor and true assurance of their equipment were slipping through their fingers. Legacy systems, broken and tedious workflows, and lastly, the need to fill in a position was creating friction between departments. The Clerk Position, once payroll taxes and benefits are counted, represents roughly $52K-$60K per year. Putting aside the price to onboard someone, the real problem came from the work itself quietly snowballing larger as the time passed.",
+    description: "Our client, a mid-market heavy production industrial manufacturer, suffered from faulty tracking of labor to their assets, and were also in need of a Maintenance Clerk. With information not being accounted for accurately, true cost of labor and equipment reliability were slipping through their fingers. Legacy systems, broken and tedious workflows, and lastly, the need to fill in a position was creating friction between departments. The clerk position, once payroll taxes and benefits are counted, represents roughly $52K-$60K per year. Putting aside the price to onboard someone, the real problem came from the work itself quietly snowballing larger as time passed.",
     metrics: [
       { label: "Clerk Position Cost", value: "$52K-$60K" },
       { label: "Initial Workflows Mapped", value: "3" },
-      { label: "Total Steps involved", value: "20+" }
+      { label: "Total Steps Involved", value: "20+" }
     ]
   },
   
   audit: {
     duration: "45 Days",
-    description: "An FDE embedded with the operations team to log day-to-day actions mapped 3 workflows amounting to over 20 steps in the process. Over a roughly 45-day audit, we shadowed the maintenance workflows as they were actually performed, not just as documented, but how they truly ran. The outcome was a dramatic simplification. We took the 3 workflows and rebuilt them into 2 streamlined workflows with only 12 steps, the last being human approval. That's a 40% reduction of steps to complete a process, and as for the Clerk Position, more than 90% of the role's documented responsibilities could be handled by a system.",
+    description: "A forward-deployed engineer embedded with the operations team, logging day-to-day actions, and mapped 3 workflows amounting to over 20 steps in the process. Over a roughly 45-day audit, we shadowed the maintenance workflows as they were actually performed, rather than just as documented. The outcome was a dramatic simplification. We took the 3 workflows and rebuilt them into 2 streamlined workflows with only 12 steps, the last being human approval. That's a 40% reduction of steps to complete a process, and as for the clerk position, more than 90% of the role's documented responsibilities could be handled by a system.",
     findings: [
       "Clerk position documentation showed 90%+ tasks could be automated by system logic",
       "Maintenance workflow tracking was inconsistent and prone to human error",
-      "Over 20 manual steps were required to log a single labor-to-asset event"
+      "Three manual workflows together totalled over 20 steps to complete the tracking process"
     ]
   },
   
   architecture: {
-    description: "Instead of hiring additional staff or performing a full system migration, we built a lightweight, model-agnostic agentic operating layer on top of their existing databases and physical logs. We deployed our specialized model:",
+    description: "Instead of hiring additional staff or performing a full system migration, we built a lightweight, model-agnostic agentic operating layer on top of their existing databases and physical logs. We deployed three specialized agents:",
     agents: [
       {
         name: "Master PM Tracking",
@@ -64,7 +64,7 @@ export const caseStudy = {
     { label: "Active Workflows", before: "3 processes", after: "2 processes", detail: "Consolidated & simplified" },
     { label: "Workflow Steps", before: "20 steps", after: "12 steps", detail: "40% reduction in steps" },
     { label: "Clerk Tasks Automated", before: "0%", after: "90%+", detail: "Handled by agentic system" },
-    { label: "Clerk Position Cost", before: "$52K-$60K", after: "$0/yr", detail: "Roles automated & saved" },
+    { label: "Clerk Position Cost", before: "$52K-$60K", after: "~$52K/yr avoided", detail: "Position not backfilled" },
     { label: "Labor Tracking Accuracy", before: "Faulty", after: "99.8%", detail: "Precise labor-to-asset mapping" },
     { label: "Process Overhead", before: "High Friction", after: "Streamlined", detail: "Final human approval step only" }
   ],
@@ -76,10 +76,10 @@ export const caseStudy = {
     methodology: "Gross savings across direct clerk labor avoidance ($52,000), labor allocation correction ($15,000), and asset assurance boost ($12,000) total $79,000. Applying our strict 15% under-claiming discount buffer (-$12,000) yields an estimated net year-one savings of $67,000.",
     drivers: [
       { driver: "Clerk Labor Savings", amount: "$52,000", method: "Automated 90%+ of documented clerk tasks based on $52K-$60K salary range." },
-      { driver: "Labor Allocation Delta", amount: "$15,000", method: "Corrected asset labor tracking leakage and billing discrepancies." },
-      { driver: "Asset Assurance Boost", amount: "$12,000", method: "Reduced equipment downtime through automated work-order dispatching." }
+      { driver: "Labor Allocation Delta", amount: "$15,000", method: "Corrected asset labor tracking leakage and cost-allocation discrepancies." },
+      { driver: "Asset Assurance Boost", amount: "$12,000", method: "Reduced downtime via on-time PM tracking & low-stock spare-part alerts." }
     ]
   },
   
-  crossImpact: "Importantly, automated tracking cleared reporting bottlenecks 65% faster. This third-order effect resulted in freeing up time for the maintenance coordinator to focus on more high-value tasks. Internal team satisfaction scores rose by 12% in the first quarter post-launch. These soft benefits are excluded from the conservative financial ROI calculation above."
+  crossImpact: "Importantly, automated tracking cleared reporting bottlenecks 65% faster. This second-order effect resulted in freeing up time for the maintenance coordinator to focus on more high-value tasks. Internal team satisfaction scores rose by 12% in the first quarter post-launch. These soft benefits are excluded from the conservative financial ROI calculation above."
 };

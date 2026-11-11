@@ -75,8 +75,8 @@ function Navbar() {
               {/* Right Voussoir 1 */}
               <path d="M 14.5 3.3 L 18 4.5 L 16.7 9 L 13.7 8.3 Z" fill="currentColor" />
               
-              {/* Keystone (Central Red block) */}
-              <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#E63B2E" />
+              {/* Keystone (Central block) */}
+              <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#242B32" />
             </svg>
             KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SOLUTION</span>
           </Link>
@@ -112,7 +112,7 @@ function Navbar() {
             <a
               href="/#book"
               onClick={(e) => handleNavClick(e, 'book')}
-              className={`inline-flex items-center gap-1.5 px-5 py-2 rounded-full border font-mono text-xs font-bold uppercase transition-all duration-300 scale-100 hover:scale-103 ${
+              className={`inline-flex items-center gap-1.5 px-5 py-2 rounded-full border font-mono text-xs font-bold uppercase transition-all duration-300 scale-100 hover:scale-105 ${
                 isScrolled || isSubPage
                   ? 'bg-signal text-offwhite border-charcoal hover:bg-charcoal hover:text-offwhite hover:shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]'
                   : 'bg-offwhite text-charcoal border-transparent hover:bg-signal hover:text-offwhite'

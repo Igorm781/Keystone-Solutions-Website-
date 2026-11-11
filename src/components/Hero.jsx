@@ -40,7 +40,7 @@ function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity scale-105"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920')`
+          backgroundImage: `url('/keystone_hero_workbench.webp')`
         }}
       />
       
@@ -79,7 +79,7 @@ function Hero() {
           ref={subRef}
           className="font-sans text-sm sm:text-base md:text-lg text-offwhite/75 max-w-xl leading-relaxed text-left mt-1 sm:mt-2"
         >
-          Custom agentic implementations tailored to your business. Architecting and automating your workflows from end-to-end. You own the code.
+          Custom agentic implementations tailored to your business. Architecting and automating your workflows end to end. You own the code.
         </p>
 
         {/* CTA triggers */}

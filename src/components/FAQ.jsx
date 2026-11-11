@@ -15,15 +15,15 @@ function FAQ() {
     },
     {
       q: "How much of our team's time is required?",
-      a: "We embed with minimal disruption. We ask for a maximum of 4 hours of total time from your subject matter experts during the initial mapping phase, and short review checks at weekly milestones. We write the code; you keep running the plant."
+      a: "We embed with minimal disruption. We shadow your team while they work, so it costs them very little time; we ask for ~4 hours of dedicated SME interviews plus short weekly reviews. We write the code; you keep running the plant."
     },
     {
       q: "Who owns the code and the agents?",
-      a: "You do. Unlike enterprise SaaS platforms that lock you into monthly licenses, you own the code, the custom integrations, and the weights. If our contract ends, your systems continue to run exactly as they are without interruption."
+      a: "You do. Unlike enterprise SaaS platforms that lock you into monthly licenses, you own the code, the custom integrations, the prompts and the agent configurations. If our contract ends, your systems continue to run exactly as they are without interruption."
     },
     {
       q: "How does pricing work?",
-      a: "We operate relative to the work at hand and to each company. Our services vary in price, but are scoped and presented once the initial meeting has occurred. If you proceed with the build, we quote a fixed price for implementation. We don't charge per-agent licenses or seat fees."
+      a: "Pricing is scoped to the work and to each company. Our services vary in price, but are scoped and presented once the initial meeting has occurred. If you proceed with the build, we quote a fixed price for implementation. Ongoing support is available as an optional monthly retainer. We don't charge per-agent licenses or seat fees."
     }
   ]
 
@@ -59,6 +59,7 @@ function FAQ() {
               {/* Question Clickable Area */}
               <button
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={isOpen}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
                 <span className="font-sans text-base sm:text-lg font-bold text-charcoal">
@@ -75,14 +76,14 @@ function FAQ() {
 
               {/* Answer Area */}
               <div
-                style={{
-                  maxHeight: isOpen ? '250px' : '0px',
-                  opacity: isOpen ? 1 : 0
-                }}
-                className="transition-all duration-300 ease-in-out overflow-hidden border-t border-charcoal/10 bg-paper/20"
+                className={`grid transition-all duration-300 ease-in-out border-t border-charcoal/10 bg-paper/20 ${
+                  isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                }`}
               >
-                <div className="p-6 font-sans text-sm sm:text-base text-charcoal/70 leading-relaxed">
-                  {faq.a}
+                <div className="overflow-hidden">
+                  <div className="p-6 font-sans text-sm sm:text-base text-charcoal/70 leading-relaxed">
+                    {faq.a}
+                  </div>
                 </div>
               </div>
             </div>

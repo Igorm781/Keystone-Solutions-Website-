@@ -59,8 +59,8 @@ function Footer() {
                 {/* Right Voussoir 1 */}
                 <path d="M 14.5 3.3 L 18 4.5 L 16.7 9 L 13.7 8.3 Z" fill="currentColor" />
                 
-                {/* Keystone (Central Red block) */}
-                <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#E63B2E" />
+                {/* Keystone (Central block) */}
+                <path d="M 10 3 L 14 3 L 13.2 8 L 10.8 8 Z" fill="#242B32" />
               </svg>
               KEYSTONE <span className="hidden sm:inline font-sans font-light text-sm tracking-widest opacity-60">SOLUTION</span>
             </Link>

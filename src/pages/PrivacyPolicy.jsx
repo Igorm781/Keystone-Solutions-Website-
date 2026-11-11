@@ -38,9 +38,9 @@ function PrivacyPolicy() {
 
         {/* Metadata sub-bar */}
         <div className="font-mono text-xs text-charcoal/60 flex flex-wrap items-center gap-x-6 gap-y-2 pb-6 mb-10 border-b border-charcoal/10 uppercase tracking-wide">
-          <span>Effective: September 2026</span>
+          <span>Effective: October 2026</span>
           <span>•</span>
-          <span>Last Updated: September 2026</span>
+          <span>Last Updated: October 2026</span>
           <span>•</span>
           <span>Scope: keystonesolution.co & Client Inquiries</span>
         </div>
@@ -97,7 +97,6 @@ function PrivacyPolicy() {
                   <li>Work / Corporate Email Address</li>
                   <li>Job Title or Functional Role</li>
                   <li>Company / Organization Name</li>
-                  <li>Operational requirements or notes submitted</li>
                 </ul>
               </div>
 
@@ -157,6 +156,10 @@ function PrivacyPolicy() {
               <div className="border-l-2 border-signal pl-4 py-1">
                 <span className="font-mono text-xs font-bold uppercase text-charcoal block">Hosting & Content Delivery</span>
                 <span className="font-sans text-xs sm:text-sm text-charcoal/70">Static assets and web applications are deployed via secure edge hosting networks with global SSL/TLS certificates.</span>
+              </div>
+              <div className="border-l-2 border-signal pl-4 py-1">
+                <span className="font-mono text-xs font-bold uppercase text-charcoal block">Typography & Fonts</span>
+                <span className="font-sans text-xs sm:text-sm text-charcoal/70">Font stylesheets and font files are loaded from Google Fonts (Google LLC), which may receive your IP address solely to deliver font assets to your browser.</span>
               </div>
             </div>
           </section>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Clock, DollarSign, Database, AlertTriangle } from 'lucide-react'
+import { ArrowLeft, Users, DollarSign, Database, AlertTriangle } from 'lucide-react'
 import { caseStudy } from '../data/caseStudyData'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -47,7 +47,7 @@ function CaseStudy() {
             </div>
           </div>
           <div className="p-5 bg-paper/20 rounded-2xl border border-charcoal/10 flex items-start gap-4">
-            <Clock className="w-6 h-6 text-signal mt-1 flex-shrink-0" />
+            <Users className="w-6 h-6 text-signal mt-1 flex-shrink-0" />
             <div>
               <span className="font-mono text-[9px] uppercase text-charcoal/40 block">Target Department Scope</span>
               <span className="font-sans font-bold text-base text-charcoal">{caseStudy.profile.teamSize}</span>
@@ -263,7 +263,7 @@ function CaseStudy() {
                     <td className="p-3 text-amber-800/70">Conservative variance buffer deducted</td>
                   </tr>
                   <tr className="bg-charcoal text-offwhite font-mono text-xs font-bold">
-                    <td className="p-3 uppercase">Net Realized Savings</td>
+                    <td className="p-3 uppercase">Net Estimated Savings</td>
                     <td className="p-3 text-emerald-400">{caseStudy.roi.value}</td>
                     <td className="p-3 text-offwhite/70">Conservative Year-One Value</td>
                   </tr>
@@ -309,13 +309,13 @@ function CaseStudy() {
               Deploy similar systems on your floor.
             </h3>
             <p className="font-sans text-sm text-offwhite/70 leading-relaxed">
-              We audit operations, architecture bespoke agents, and synchronize legacy physical systems. Zero software lock-in, full code ownership.
+              We audit operations, architect bespoke agents, and synchronize legacy physical systems. Zero software lock-in, full code ownership.
             </p>
             <Link
               to="/#book"
               className="brutalist-button py-3 px-8 text-xs font-mono tracking-wider"
             >
-              SCHEDULE AN AUDIT
+              BOOK A DISCOVERY CALL
             </Link>
           </div>
         </section>

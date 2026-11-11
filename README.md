@@ -1,16 +1,24 @@
-# React + Vite
+# Keystone Solution (keystonesolution.co)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Production website for **Keystone Solution** — AI Integration & Architecture for Manufacturers.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Keystone Solution builds custom, model-agnostic agentic operating layers on top of existing industrial databases, ERPs, and floor logs.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19 + Vite 8
+- **Styling**: Tailwind CSS 3 (Industrial Brutalist theme)
+- **Icons**: Lucide React
+- **Animations**: GSAP
+- **Routing**: React Router 7
+- **SSG / Prerendering**: Custom SSR build script generating static HTML per route (`scripts/prerender.js`)
+- **Linter**: Oxlint
 
-## Expanding the Oxlint configuration
+## Development Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- `npm run dev` — Start Vite local dev server
+- `npm run build` — Build client bundle, SSR bundle, and prerender all routes into `dist/`
+- `npm run preview` — Preview the production `dist/` build locally
+- `npm run lint` — Run Oxlint
