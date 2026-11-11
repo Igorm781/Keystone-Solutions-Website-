@@ -78,7 +78,7 @@ function Protocol() {
             <div className="absolute inset-0 brutalist-grid opacity-30" />
 
             {/* Laser Line */}
-            <div className="absolute left-0 w-full h-[3px] bg-signal/80 shadow-[0_0_8px_#770505] animate-[scan-line_3s_ease-in-out_infinite]" />
+            <div className="absolute left-0 w-full h-[3px] bg-signal/80 shadow-[0_0_8px_#E63B2E] animate-[scan-line_3s_ease-in-out_infinite]" />
 
             {/* Central Node Illustration */}
             <svg

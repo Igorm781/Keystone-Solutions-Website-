@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         paper: "#E8E4DD",
-        signal: "#770505",
+        signal: "#E63B2E",
         offwhite: "#F5F3EE",
         charcoal: "#111111",
       },
@@ -20,8 +20,8 @@ export default {
       boxShadow: {
         brutalist: "4px 4px 0px 0px #111111",
         "brutalist-hover": "2px 2px 0px 0px #111111",
-        "brutalist-red": "4px 4px 0px 0px #770505",
-        "brutalist-red-hover": "2px 2px 0px 0px #770505",
+        "brutalist-red": "4px 4px 0px 0px #E63B2E",
+        "brutalist-red-hover": "2px 2px 0px 0px #E63B2E",
         "brutalist-large": "8px 8px 0px 0px #111111",
       },
       animation: {
